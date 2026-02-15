@@ -1,0 +1,3 @@
+**WARN: (IMPVPA-120):	verifyProcessAntenna command is obsolete and should not be used any more. It still works in this release but will be removed in future release. You should change to use verify_antena which is the replacement tool for verifyProcessAntenna.
+**ERROR: (IMPVPA-22):	verifyProcessAntenna failed to run because no process antenna information found for this design. Import the process antenna library data and run verifyProcessAntenna again.
+Type 'man IMPVPA-22' for more detail.

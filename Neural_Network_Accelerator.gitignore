@@ -1,0 +1,69 @@
+# =============================================================================
+# .gitignore — VLSI / Cadence Project
+# =============================================================================
+
+# ---- ASAP7 PDK libraries (large, redistributable separately) ----
+lib/*.lib
+lef/*.lef
+lef/*.tlef
+qrc/
+
+# ---- Cadence Genus (Synthesis) ----
+syn/fv/
+syn/*.log
+syn/*.cmd
+syn/genus.*
+syn/.cadence/
+syn/*.dat/
+
+# ---- Cadence Innovus (P&R) ----
+PnR/run/*.log
+PnR/run/*.rep
+PnR/run/*.rpt
+PnR/run/timingReports/
+PnR/run/summaryReport/
+PnR/run/innovus_temp_*/
+PnR/run/.cadence/
+PnR/run/*.globals
+PnR/run/cts_spec.tcl
+
+# ---- Innovus database (very large) ----
+outputs/*.dat/
+outputs/*.dat.dat/
+
+# ---- Simulation ----
+sim_work/
+sim_work_gate/
+xcelium.d/
+INCA_libs/
+*.shm/
+*.vcd
+*.fsdb
+*.wlf
+
+# ---- Large binary outputs ----
+outputs/*.gds
+outputs/*.spef
+
+# ---- General Cadence ----
+.cadence/
+.cdsenv
+.simvision/
+*.key
+*.log.bak
+cmdlog/
+*.oa/
+
+# ---- OS / Editor ----
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# ---- Python (if any helper scripts) ----
+__pycache__/
+*.pyc
+.env

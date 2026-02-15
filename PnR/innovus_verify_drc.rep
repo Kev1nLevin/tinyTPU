@@ -1,0 +1,51 @@
+#-check_same_via_cell true               # bool, default=false, user setting
+ *** Starting Verify DRC (MEM: 7405.3) ***
+
+  VERIFY DRC ...... Starting Verification
+  VERIFY DRC ...... Initializing
+  VERIFY DRC ...... Deleting Existing Violations
+  VERIFY DRC ...... Creating Sub-Areas
+ VERIFY_DRC: checking all layers except Pad to Pad ...
+  VERIFY DRC ...... Using new threading
+ VERIFY DRC ...... Sub-Area: {0.000 0.000 48.384 48.384} 1 of 16  Thread : 7
+ VERIFY DRC ...... Sub-Area: {0.000 96.768 48.384 145.152} 9 of 16  Thread : 2
+ VERIFY DRC ...... Sub-Area: {0.000 145.152 48.384 192.800} 13 of 16  Thread : 7
+ VERIFY DRC ...... Sub-Area: {96.768 0.000 145.152 48.384} 3 of 16  Thread : 0
+ VERIFY DRC ...... Sub-Area: {96.768 96.768 145.152 145.152} 11 of 16  Thread : 4
+ VERIFY DRC ...... Sub-Area: {145.152 0.000 192.800 48.384} 4 of 16  Thread : 0
+ VERIFY DRC ...... Sub-Area: {0.000 48.384 48.384 96.768} 5 of 16  Thread : 5
+ VERIFY DRC ...... Sub-Area: {48.384 145.152 96.768 192.800} 14 of 16  Thread : 6
+ VERIFY DRC ...... Sub-Area: {145.152 96.768 192.800 145.152} 12 of 16  Thread : 4
+ VERIFY DRC ...... Sub-Area: {48.384 0.000 96.768 48.384} 2 of 16  Thread : 5
+ VERIFY DRC ...... Sub-Area: {145.152 145.152 192.800 192.800} 16 of 16  Thread : 7
+ VERIFY DRC ...... Sub-Area: {48.384 96.768 96.768 145.152} 10 of 16  Thread : 6
+ VERIFY DRC ...... Sub-Area: {145.152 48.384 192.800 96.768} 8 of 16  Thread : 4
+ VERIFY DRC ...... Sub-Area: {96.768 145.152 145.152 192.800} 15 of 16  Thread : 3
+ VERIFY DRC ...... Sub-Area: {48.384 48.384 96.768 96.768} 6 of 16  Thread : 6
+ VERIFY DRC ...... Thread : 5 finished.
+ VERIFY DRC ...... Thread : 0 finished.
+ VERIFY DRC ...... Thread : 1 finished.
+ VERIFY DRC ...... Thread : 3 finished.
+ VERIFY DRC ...... Thread : 7 finished.
+ VERIFY DRC ...... Thread : 4 finished.
+ VERIFY DRC ...... Thread : 2 finished.
+ VERIFY DRC ...... Sub-Area: {96.768 48.384 145.152 96.768} 7 of 16  Thread : 6
+ VERIFY DRC ...... Thread : 6 finished.
+ VERIFY_DRC: checking layers from Pad to Pad ...
+**WARN: (IMPVFG-1198):	The number of CPUs requested 8 is larger than that verify_drc used 1. In Multithreading mode, the number of CPUs verify_drc used is not larger than the number of subareas.
+ Use 'setMultiCpuUsage -localCpu' to specify the less cup number if the verify area is not large.
+  VERIFY DRC ...... Using new threading
+  VERIFY DRC ...... Sub-Area: {0.000 0.000 192.800 192.800} 1 of 1
+  VERIFY DRC ...... Sub-Area : 1 complete 0 Viols.
+
+  Verification Complete : 140 Viols.
+
+ Violation Summary By Layer and Type:
+
+	           Rect   WidTbl   Totals
+	M3           84        0       84
+	M4            0       56       56
+	Totals       84       56      140
+
+ *** End Verify DRC (CPU TIME: 0:00:04.5  ELAPSED TIME: 0:00:02.0  MEM: 256.1M) ***
+

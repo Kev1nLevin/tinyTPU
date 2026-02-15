@@ -1,0 +1,70 @@
+# =============================================================================
+# MMMC (Multi-Mode Multi-Corner) Setup - Single Corner TT
+# Used by Innovus for timing analysis
+#
+# CRITICAL: Cadence tools cannot handle spaces in file paths.
+# Your project directory "Neural Network Accelerator" has spaces.
+#
+# FIX (pick one):
+#   Option A (recommended): Rename the directory:
+#     mv "Neural Network Accelerator" Neural_Network_Accelerator
+#
+#   Option B: Create a symlink and run from it:
+#     ln -s "/home/kevinlevin/Projects/Neural Network Accelerator" ~/Projects/NNA
+#     cd ~/Projects/NNA/run
+#     innovus -init ../scripts/innovus.tcl |& tee innovus_run.rep
+#
+# =============================================================================
+
+# ---- Build paths from pwd (do NOT use file normalize - it resolves symlinks) ----
+set lib_dir    "[pwd]/../lib"
+set output_dir "[pwd]/../outputs"
+
+puts "MMMC: lib_dir    = $lib_dir"
+puts "MMMC: output_dir = $output_dir"
+
+# ---- Library sets ----
+create_library_set -name tt_libs \
+    -timing [list \
+        ${lib_dir}/asap7sc7p5t_AO_LVT_TT_nldm_211120.lib \
+        ${lib_dir}/asap7sc7p5t_INVBUF_LVT_TT_nldm_220122.lib \
+        ${lib_dir}/asap7sc7p5t_OA_LVT_TT_nldm_211120.lib \
+        ${lib_dir}/asap7sc7p5t_SEQ_LVT_TT_nldm_220123.lib \
+        ${lib_dir}/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib \
+        ${lib_dir}/asap7sc7p5t_AO_SLVT_TT_nldm_211120.lib \
+        ${lib_dir}/asap7sc7p5t_INVBUF_SLVT_TT_nldm_220122.lib \
+        ${lib_dir}/asap7sc7p5t_OA_SLVT_TT_nldm_211120.lib \
+        ${lib_dir}/asap7sc7p5t_SEQ_SLVT_TT_nldm_220123.lib \
+        ${lib_dir}/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib \
+    ]
+
+# ---- RC corner (no QRC - use default estimation) ----
+create_rc_corner -name rc_typical \
+    -preRoute_res 1.0 \
+    -preRoute_cap 1.0 \
+    -preRoute_clkres 0.0 \
+    -preRoute_clkcap 0.0 \
+    -postRoute_res 1.0 \
+    -postRoute_cap 1.0 \
+    -postRoute_xcap 1.0 \
+    -postRoute_clkres 0.0 \
+    -postRoute_clkcap 0.0
+
+# ---- Delay corner ----
+create_delay_corner -name tc_tt \
+    -library_set tt_libs \
+    -rc_corner rc_typical
+
+# ---- Constraint mode (from Genus SDC) ----
+create_constraint_mode -name func_mode \
+    -sdc_files [list ${output_dir}/systolic_top.sdc]
+
+# ---- Analysis view ----
+create_analysis_view -name view_tt \
+    -constraint_mode func_mode \
+    -delay_corner tc_tt
+
+# ---- Set active views ----
+set_analysis_view \
+    -setup [list view_tt] \
+    -hold  [list view_tt]

@@ -1,0 +1,153 @@
+Updating ideal nets and annotations...
+Clock tree spec update: Ideal nets, transition and delay annotations were updated to match active timing constraints.
+Updating ideal nets and annotations done. (took cpu=0:00:00.0 real=0:00:00.0)
+No differences between SDC and CTS ideal net status found.
+Clock tree timing engine global stage delay update for tc_tt:both.early...
+Clock tree timing engine global stage delay update for tc_tt:both.early done. (took cpu=0:00:00.1 real=0:00:00.0)
+Clock tree timing engine global stage delay update for tc_tt:both.late...
+Clock tree timing engine global stage delay update for tc_tt:both.late done. (took cpu=0:00:00.1 real=0:00:00.0)
+
+Skew Group Structure:
+=====================
+
+--------------------------------------------------------------------
+Skew Group       Sources    Constrained Sinks    Unconstrained Sinks
+--------------------------------------------------------------------
+clk/func_mode       1             1063                    0
+--------------------------------------------------------------------
+
+Skew Group Summary:
+===================
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Timing Corner       Skew Group       ID Target    Min ID    Max ID    Avg ID    Std.Dev. ID    Skew Target Type    Skew Target    Skew    Skew window occupancy
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+tc_tt:both.early    clk/func_mode        -         42.3      52.7      47.6         2.3        ignored                  -         10.4              -
+tc_tt:both.late     clk/func_mode    none          45.4      55.1      50.5         2.1        auto computed        20.7           9.7    100% {45.4, 55.1}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* - indicates that target was not met.
+
+Skew Group Min/Max path pins:
+=============================
+
+-------------------------------------------------------------------------
+Timing Corner       Skew Group       Min ID    PathID    Max ID    PathID
+-------------------------------------------------------------------------
+tc_tt:both.early    clk/func_mode     42.3       1        52.7       2
+-    min mat_b_reg[2][3][4]/CLK
+-    max u_array_gen_row[0].gen_col[3].u_pe_u_mac_acc_reg_reg[19]/CLK
+tc_tt:both.late     clk/func_mode     45.4       3        55.1       4
+-    min mat_b_reg[2][3][4]/CLK
+-    max u_array_gen_row[0].gen_col[3].u_pe_u_mac_acc_reg_reg[19]/CLK
+-------------------------------------------------------------------------
+
+Timing for timing corner tc_tt:both.early, min clock_path:
+==========================================================
+
+PathID    :  1
+Path type : skew group clk/func_mode (path 1 of 1)
+Start     : clk
+End       : mat_b_reg[2][3][4]/CLK
+Delay     : 42.3
+
+-------------------------------------------------------------------------------------------------------------
+Name  Lib cell                  Event  Incr  Arrival  Slew  Cap     Location         Distance  Fanout  Status
+                                       (ps)  (ps)     (ps)  (fF)                     (um)              
+-- Clockpath trace ------------------------------------------------------------------------------------------
+clk
+-     -                         rise   -       0.0     4.1  44.094  (0.000,56.080)   -            4    
+CTS_ccl_a_buf_00020/A
+-     BUFx12f_ASAP7_75t_SL      rise    1.6    1.6     7.3  -       (41.104,58.600)   43.624   -       
+CTS_ccl_a_buf_00020/Y
+-     BUFx12f_ASAP7_75t_SL      rise   14.3   15.9    13.3  16.962  (43.524,58.996)    2.816      4    
+CTS_ccl_a_buf_00015/A
+-     BUFx16f_ASAP7_75t_SL      rise    0.1   16.0    13.3  -       (44.344,60.760)    2.584   -       
+CTS_ccl_a_buf_00015/Y
+-     BUFx16f_ASAP7_75t_SL      rise   25.9   41.9    34.8  63.686  (41.492,61.156)    3.248     64    
+mat_b_reg[2][3][4]/CLK
+-     DFFASRHQNx1_ASAP7_75t_SL  rise    0.4   42.3    34.8  -       (39.808,56.440)    6.400   -       
+-------------------------------------------------------------------------------------------------------------
+
+Timing for timing corner tc_tt:both.early, max clock_path:
+==========================================================
+
+PathID    :  2
+Path type : skew group clk/func_mode (path 1 of 1)
+Start     : clk
+End       : u_array_gen_row[0].gen_col[3].u_pe_u_mac_acc_reg_reg[19]/CLK
+Delay     : 52.7
+
+---------------------------------------------------------------------------------------------------------------
+Name  Lib cell                  Event  Incr  Arrival  Slew  Cap     Location           Distance  Fanout  Status
+                                       (ps)  (ps)     (ps)  (fF)                       (um)              
+-- Clockpath trace --------------------------------------------------------------------------------------------
+clk
+-     -                         rise   -       0.0     4.1  44.094  (0.000,56.080)     -            4    
+CTS_ccl_a_buf_00019/A
+-     BUFx12f_ASAP7_75t_SL      rise    3.9    3.9     8.9  -       (129.016,123.400)  196.336   -       
+CTS_ccl_a_buf_00019/Y
+-     BUFx12f_ASAP7_75t_SL      rise   16.3   20.2    16.7  22.261  (131.436,123.796)    2.816      4    
+CTS_ccl_a_buf_00004/A
+-     BUFx24_ASAP7_75t_SL       rise    0.7   20.9    16.7  -       (145.216,134.200)   24.184   -       
+CTS_ccl_a_buf_00004/Y
+-     BUFx24_ASAP7_75t_SL       rise   30.0   50.9    40.3  78.538  (141.500,134.596)    4.112     65    
+u_array_gen_row[0].gen_col[3].u_pe_u_mac_acc_reg_reg[19]/CLK
+-     DFFASRHQNx1_ASAP7_75t_SL  rise    1.8   52.7    40.4  -       (143.272,164.440)   31.616   -       
+---------------------------------------------------------------------------------------------------------------
+
+Timing for timing corner tc_tt:both.late, min clock_path:
+=========================================================
+
+PathID    :  3
+Path type : skew group clk/func_mode (path 1 of 1)
+Start     : clk
+End       : mat_b_reg[2][3][4]/CLK
+Delay     : 45.4
+
+-------------------------------------------------------------------------------------------------------------
+Name  Lib cell                  Event  Incr  Arrival  Slew  Cap     Location         Distance  Fanout  Status
+                                       (ps)  (ps)     (ps)  (fF)                     (um)              
+-- Clockpath trace ------------------------------------------------------------------------------------------
+clk
+-     -                         rise   -       0.0     4.1  44.094  (0.000,56.080)   -            4    
+CTS_ccl_a_buf_00020/A
+-     BUFx12f_ASAP7_75t_SL      rise    1.7    1.7     7.5  -       (41.104,58.600)   43.624   -       
+CTS_ccl_a_buf_00020/Y
+-     BUFx12f_ASAP7_75t_SL      rise   15.2   16.9    14.8  16.962  (43.524,58.996)    2.816      4    
+CTS_ccl_a_buf_00015/A
+-     BUFx16f_ASAP7_75t_SL      rise    0.4   17.3    14.8  -       (44.344,60.760)    2.584   -       
+CTS_ccl_a_buf_00015/Y
+-     BUFx16f_ASAP7_75t_SL      rise   27.6   44.9    40.4  63.686  (41.492,61.156)    3.248     64    
+mat_b_reg[2][3][4]/CLK
+-     DFFASRHQNx1_ASAP7_75t_SL  rise    0.5   45.4    40.4  -       (39.808,56.440)    6.400   -       
+-------------------------------------------------------------------------------------------------------------
+
+Timing for timing corner tc_tt:both.late, max clock_path:
+=========================================================
+
+PathID    :  4
+Path type : skew group clk/func_mode (path 1 of 1)
+Start     : clk
+End       : u_array_gen_row[0].gen_col[3].u_pe_u_mac_acc_reg_reg[19]/CLK
+Delay     : 55.1
+
+---------------------------------------------------------------------------------------------------------------
+Name  Lib cell                  Event  Incr  Arrival  Slew  Cap     Location           Distance  Fanout  Status
+                                       (ps)  (ps)     (ps)  (fF)                       (um)              
+-- Clockpath trace --------------------------------------------------------------------------------------------
+clk
+-     -                         rise   -       0.0     4.1  44.094  (0.000,56.080)     -            4    
+CTS_ccl_a_buf_00019/A
+-     BUFx12f_ASAP7_75t_SL      rise    4.0    4.0     9.3  -       (129.016,123.400)  196.336   -       
+CTS_ccl_a_buf_00019/Y
+-     BUFx12f_ASAP7_75t_SL      rise   16.9   20.9    18.2  22.261  (131.436,123.796)    2.816      4    
+CTS_ccl_a_buf_00004/A
+-     BUFx24_ASAP7_75t_SL       rise    0.8   21.7    18.2  -       (145.216,134.200)   24.184   -       
+CTS_ccl_a_buf_00004/Y
+-     BUFx24_ASAP7_75t_SL       rise   31.4   53.1    43.7  78.538  (141.500,134.596)    4.112     65    
+u_array_gen_row[0].gen_col[3].u_pe_u_mac_acc_reg_reg[19]/CLK
+-     DFFASRHQNx1_ASAP7_75t_SL  rise    2.0   55.1    44.0  -       (143.272,164.440)   31.616   -       
+---------------------------------------------------------------------------------------------------------------
+
+

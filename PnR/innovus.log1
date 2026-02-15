@@ -1,0 +1,386 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v23.14-s088_1, built Fri Feb 28 12:25:44 PST 2025
+Options:	
+Date:		Sun Feb 15 06:15:25 2026
+Host:		raindrop (x86_64 w/Linux 5.14.0-611.27.1.el9_7.x86_64) (4cores*8cpus*Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz 8192KB)
+OS:		Red Hat Enterprise Linux 9.7 (Plow)
+
+License:
+		[06:15:25.286617] Configured Lic search path (23.02-s006): /home/kevinlevin/cadence/license.dat
+
+		invs	Innovus Implementation System	23.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (46 mbytes). Set global soft_stack_size_limit to change the value.
+Info: Process UID = 104249 / 83a4ccbf-3c67-4a40-b621-492e04e4192d / l6qkbWSpcV
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+[INFO] Loading PVS 22.20 fill procedures
+<CMD> win
+<CMD> restoreDesign ../outputs/systolic_top_innovus.dat.dat
+#% Begin load design ... (date=02/15 06:16:00, mem=1908.5M)
+Loading design 'systolic_top' saved by 'Innovus' '23.14-s088_1' on 'Sun Feb 15 06:08:10 2026'.
+% Begin Load MMMC data ... (date=02/15 06:16:02, mem=1912.3M)
+% End Load MMMC data ... (date=02/15 06:16:02, total cpu=0:00:00.1, real=0:00:00.0, peak res=1912.9M, current mem=1912.9M)
+rc_typical
+
+Loading LEF file /home/kevinlevin/Projects/Neural_Network_Accelerator/outputs/systolic_top_innovus.dat.dat/libs/lef/asap7_tech_4x_201209.lef ...
+
+Loading LEF file /home/kevinlevin/Projects/Neural_Network_Accelerator/outputs/systolic_top_innovus.dat.dat/libs/lef/asap7sc7p5t_28_L_4x_220121a.lef ...
+Set DBUPerIGU to M1 pitch 576.
+
+Loading LEF file /home/kevinlevin/Projects/Neural_Network_Accelerator/outputs/systolic_top_innovus.dat.dat/libs/lef/asap7sc7p5t_28_SL_4x_220121a.lef ...
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from /home/kevinlevin/Projects/Neural_Network_Accelerator/outputs/systolic_top_innovus.dat.dat/viewDefinition.tcl
+Reading tt_libs timing library '/home/kevinlevin/Projects/Neural_Network_Accelerator/lib/asap7sc7p5t_AO_LVT_TT_nldm_211120.lib' ...
+Read 42 cells in library 'asap7sc7p5t_AO_LVT_TT_nldm_211120' 
+Reading tt_libs timing library '/home/kevinlevin/Projects/Neural_Network_Accelerator/lib/asap7sc7p5t_INVBUF_LVT_TT_nldm_220122.lib' ...
+Read 37 cells in library 'asap7sc7p5t_INVBUF_LVT_TT_nldm_211120' 
+Reading tt_libs timing library '/home/kevinlevin/Projects/Neural_Network_Accelerator/lib/asap7sc7p5t_OA_LVT_TT_nldm_211120.lib' ...
+Read 34 cells in library 'asap7sc7p5t_OA_LVT_TT_nldm_211120' 
+Reading tt_libs timing library '/home/kevinlevin/Projects/Neural_Network_Accelerator/lib/asap7sc7p5t_SEQ_LVT_TT_nldm_220123.lib' ...
+Read 33 cells in library 'asap7sc7p5t_SEQ_LVT_TT_nldm_220123' 
+Reading tt_libs timing library '/home/kevinlevin/Projects/Neural_Network_Accelerator/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib' ...
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/kevinlevin/Projects/Neural_Network_Accelerator/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib, Line 11387)
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/kevinlevin/Projects/Neural_Network_Accelerator/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib, Line 14287)
+Read 56 cells in library 'asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120' 
+Reading tt_libs timing library '/home/kevinlevin/Projects/Neural_Network_Accelerator/lib/asap7sc7p5t_AO_SLVT_TT_nldm_211120.lib' ...
+Read 42 cells in library 'asap7sc7p5t_AO_SLVT_TT_nldm_211120' 
+Reading tt_libs timing library '/home/kevinlevin/Projects/Neural_Network_Accelerator/lib/asap7sc7p5t_INVBUF_SLVT_TT_nldm_220122.lib' ...
+Read 37 cells in library 'asap7sc7p5t_INVBUF_SLVT_TT_nldm_211120' 
+Reading tt_libs timing library '/home/kevinlevin/Projects/Neural_Network_Accelerator/lib/asap7sc7p5t_OA_SLVT_TT_nldm_211120.lib' ...
+Read 34 cells in library 'asap7sc7p5t_OA_SLVT_TT_nldm_211120' 
+Reading tt_libs timing library '/home/kevinlevin/Projects/Neural_Network_Accelerator/lib/asap7sc7p5t_SEQ_SLVT_TT_nldm_220123.lib' ...
+Read 33 cells in library 'asap7sc7p5t_SEQ_SLVT_TT_nldm_220123' 
+Reading tt_libs timing library '/home/kevinlevin/Projects/Neural_Network_Accelerator/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib' ...
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/kevinlevin/Projects/Neural_Network_Accelerator/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib, Line 11387)
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/kevinlevin/Projects/Neural_Network_Accelerator/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib, Line 14287)
+Read 56 cells in library 'asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120' 
+*** End library_loading (cpu=0.12min, real=0.12min, mem=174.0M, fe_cpu=1.04min, fe_real=0.73min, fe_mem=1962.6M) ***
+% Begin Load netlist data ... (date=02/15 06:16:09, mem=1941.9M)
+*** Begin netlist parsing (mem=1962.6M) ***
+Created 404 new cells from 10 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilogBinary netlist '/home/kevinlevin/Projects/Neural_Network_Accelerator/outputs/systolic_top_innovus.dat.dat/vbin/systolic_top.v.bin'
+
+*** Memory Usage v#2 (Current mem = 1962.621M, initial mem = 839.785M) ***
+*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=1962.6M) ***
+% End Load netlist data ... (date=02/15 06:16:09, total cpu=0:00:00.1, real=0:00:00.0, peak res=1974.9M, current mem=1974.9M)
+Set top cell to systolic_top.
+Hooked 404 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell systolic_top ...
+***** UseNewTieNetMode *****.
+*** Netlist is unique.
+Set DBUPerIGU to techSite asap7sc7p5t width 864.
+** info: there are 425 modules.
+** info: there are 8228 stdCell insts.
+** info: there are 8228 stdCell insts with at least one signal pin.
+
+*** Memory Usage v#2 (Current mem = 1986.621M, initial mem = 839.785M) ***
+*info: set bottom ioPad orient R0
+Adjusting Core to Left to: 6.3360. Core to Bottom to: 6.3360.
+Start create_tracks
+Loading preference file /home/kevinlevin/Projects/Neural_Network_Accelerator/outputs/systolic_top_innovus.dat.dat/gui.pref.tcl ...
+##  Process: 45            (User Set)               
+##     Node: (not set)                           
+
+##  Check design process and node:  
+##  Design tech node is not set.
+
+Applying the recommended capacitance filtering threshold values for 45nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+**WARN: (IMPOPT-3602):	The specified path group name tdgp_reg2reg_default is not defined.
+Type 'man IMPOPT-3602' for more detail.
+Effort level <high> specified for tdgp_reg2reg_default path_group
+Slack adjustment of -0 applied on tdgp_reg2reg_default path_group
+**WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+AAE_INFO: switching setDelayCal -siAware from false to true ...
+AAE_INFO: The setting is changed from false to true in setDelayCalMode -SIAware
+addRing command will ignore shorts while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will consider rows while creating rings.
+The ring targets are set to core/block ring wires.
+Change floorplan default-technical-site to 'asap7sc7p5t'.
+*Info: initialize multi-corner CTS.
+Total number of combinational cells: 338
+Total number of sequential cells: 66
+Total number of tristate cells: 0
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: BUFx10_ASAP7_75t_SL BUFx12_ASAP7_75t_SL BUFx12f_ASAP7_75t_SL BUFx16f_ASAP7_75t_SL BUFx24_ASAP7_75t_SL BUFx2_ASAP7_75t_SL BUFx3_ASAP7_75t_SL BUFx4_ASAP7_75t_SL BUFx5_ASAP7_75t_SL BUFx4f_ASAP7_75t_SL BUFx6f_ASAP7_75t_SL BUFx8_ASAP7_75t_SL HB1xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_SL BUFx10_ASAP7_75t_L BUFx12_ASAP7_75t_L BUFx12f_ASAP7_75t_L BUFx16f_ASAP7_75t_L BUFx24_ASAP7_75t_L BUFx2_ASAP7_75t_L BUFx3_ASAP7_75t_L BUFx4_ASAP7_75t_L BUFx5_ASAP7_75t_L BUFx4f_ASAP7_75t_L BUFx6f_ASAP7_75t_L BUFx8_ASAP7_75t_L HB1xp67_ASAP7_75t_L
+Total number of usable buffers: 27
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CKINVDCx10_ASAP7_75t_SL CKINVDCx12_ASAP7_75t_SL CKINVDCx11_ASAP7_75t_SL CKINVDCx14_ASAP7_75t_SL CKINVDCx16_ASAP7_75t_SL CKINVDCx20_ASAP7_75t_SL CKINVDCx8_ASAP7_75t_SL CKINVDCx5p33_ASAP7_75t_SL CKINVDCx6p67_ASAP7_75t_SL CKINVDCx9p33_ASAP7_75t_SL INVx11_ASAP7_75t_SL INVx13_ASAP7_75t_SL INVx1_ASAP7_75t_SL INVx2_ASAP7_75t_SL INVx3_ASAP7_75t_SL INVx4_ASAP7_75t_SL INVx5_ASAP7_75t_SL INVx6_ASAP7_75t_SL INVx8_ASAP7_75t_SL INVxp67_ASAP7_75t_SL INVxp33_ASAP7_75t_SL CKINVDCx10_ASAP7_75t_L CKINVDCx12_ASAP7_75t_L CKINVDCx11_ASAP7_75t_L CKINVDCx14_ASAP7_75t_L CKINVDCx16_ASAP7_75t_L CKINVDCx20_ASAP7_75t_L CKINVDCx8_ASAP7_75t_L CKINVDCx5p33_ASAP7_75t_L CKINVDCx6p67_ASAP7_75t_L CKINVDCx9p33_ASAP7_75t_L INVx11_ASAP7_75t_L INVx13_ASAP7_75t_L INVx1_ASAP7_75t_L INVx2_ASAP7_75t_L INVx3_ASAP7_75t_L INVx4_ASAP7_75t_L INVx5_ASAP7_75t_L INVx6_ASAP7_75t_L INVx8_ASAP7_75t_L INVxp67_ASAP7_75t_L INVxp33_ASAP7_75t_L
+Total number of usable inverters: 42
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: HB3xp67_ASAP7_75t_SL HB4xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_L HB3xp67_ASAP7_75t_L HB4xp67_ASAP7_75t_L
+Total number of identified usable delay cells: 5
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+% Begin Load MMMC data post ... (date=02/15 06:16:11, mem=2321.8M)
+% End Load MMMC data post ... (date=02/15 06:16:11, total cpu=0:00:00.0, real=0:00:00.0, peak res=2321.8M, current mem=2321.8M)
+Reading floorplan file - /home/kevinlevin/Projects/Neural_Network_Accelerator/outputs/systolic_top_innovus.dat.dat/systolic_top.fp.gz (mem = 2227.8M).
+% Begin Load floorplan data ... (date=02/15 06:16:11, mem=2321.4M)
+*info: reset 8934 existing net BottomPreferredLayer and AvoidDetour
+Deleting old partition specification.
+Set FPlanBox to (0 0 771200 771200)
+ ... processed partition successfully.
+Reading binary special route file /home/kevinlevin/Projects/Neural_Network_Accelerator/outputs/systolic_top_innovus.dat.dat/systolic_top.fp.spr.gz (Created by Innovus v23.14-s088_1 on Sun Feb 15 06:08:09 2026, version: 1)
+Convert 0 swires and 0 svias from compressed groups
+58 swires and 96 svias were compressed
+58 swires and 96 svias were decompressed from small or sparse groups
+Ending "Read special route file" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2325.1M, current mem=2325.1M)
+There are 22 nets with weight being set
+There are 23 nets with bottomPreferredRoutingLayer being set
+There are 22 nets with avoidDetour being set
+Extracting standard cell pins and blockage ...... 
+**WARN: (IMPTR-2106):	There is no track defined on layer M1. This can be due to out of range track value and the need to use 64bit version or a problem with the track in that layer. Check the track input for layer M1. You may need to run 'generateTracks' command before proceeding.
+Pin and blockage extraction finished
+% End Load floorplan data ... (date=02/15 06:16:11, total cpu=0:00:00.1, real=0:00:00.0, peak res=2325.1M, current mem=2323.6M)
+Reading congestion map file /home/kevinlevin/Projects/Neural_Network_Accelerator/outputs/systolic_top_innovus.dat.dat/systolic_top.route.congmap.gz ...
+% Begin Load SymbolTable ... (date=02/15 06:16:11, mem=2323.9M)
+Suppress "**WARN ..." messages.
+Un-suppress "**WARN ..." messages.
+% End Load SymbolTable ... (date=02/15 06:16:11, total cpu=0:00:00.1, real=0:00:01.0, peak res=2327.8M, current mem=2327.8M)
+Loading place ...
+% Begin Load placement data ... (date=02/15 06:16:12, mem=2327.8M)
+Reading placement file - /home/kevinlevin/Projects/Neural_Network_Accelerator/outputs/systolic_top_innovus.dat.dat/systolic_top.place.gz.
+** Reading stdCellPlacement_binary (Created by Innovus v23.14-s088_1 on Sun Feb 15 06:08:09 2026, version# 2) ...
+Read Views for adaptive view pruning ...
+Read 0 views from Binary DB for adaptive view pruning
+*** applyConnectGlobalNets disabled.
+*** Completed restorePlace (cpu=0:00:00.1 real=0:00:00.0 mem=2229.8M) ***
+Total net length = 9.047e+04 (4.124e+04 4.923e+04) (ext = 1.020e+04)
+% End Load placement data ... (date=02/15 06:16:12, total cpu=0:00:00.1, real=0:00:00.0, peak res=2338.6M, current mem=2335.9M)
+Reading PG file /home/kevinlevin/Projects/Neural_Network_Accelerator/outputs/systolic_top_innovus.dat.dat/systolic_top.pg.gz, version#2, (Created by Innovus v23.14-s088_1 on       Sun Feb 15 06:08:09 2026)
+*** Completed restorePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=2229.8M) ***
+% Begin Load routing data ... (date=02/15 06:16:12, mem=2336.7M)
+Reading routing file - /home/kevinlevin/Projects/Neural_Network_Accelerator/outputs/systolic_top_innovus.dat.dat/systolic_top.route.gz.
+Reading Innovus routing data (Created by Innovus v23.14-s088_1 on Sun Feb 15 06:08:09 2026 Format: 23.1) ...
+*** Total 8730 nets are successfully restored.
+*** Completed restoreRoute (cpu=0:00:00.1 real=0:00:00.0 mem=2237.8M) ***
+% End Load routing data ... (date=02/15 06:16:12, total cpu=0:00:00.1, real=0:00:00.0, peak res=2347.3M, current mem=2346.9M)
+Loading Drc markers ...
+... 476 markers are loaded ...
+... 140 geometry drc markers are loaded ...
+... 0 antenna drc markers are loaded ...
+TAT_INFO: ::restoreCongMap REAL = 0 : CPU = 0 : MEM = 0.
+Reading property file /home/kevinlevin/Projects/Neural_Network_Accelerator/outputs/systolic_top_innovus.dat.dat/systolic_top.prop
+*** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2241.8M) ***
+Reading dirtyarea snapshot file /home/kevinlevin/Projects/Neural_Network_Accelerator/outputs/systolic_top_innovus.dat.dat/systolic_top.db.da.gz (Create by Innovus v23.14-s088_1 on Sun Feb 15 06:08:10 2026, version: 7).
+Extraction setup Started for TopCell systolic_top 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+**WARN: (IMPEXT-2773):	The via resistance between layers M0 and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M1 and M2 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M2 and M3 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M3 and M4 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M4 and M5 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M5 and M6 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M6 and M7 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M7 and M8 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M8 and M9 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M9 and M10 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M1 is not defined in the cap table. Therefore, the LEF value 0.076 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M2 is not defined in the cap table. Therefore, the LEF value 0.076 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M3 is not defined in the cap table. Therefore, the LEF value 0.076 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M4 is not defined in the cap table. Therefore, the LEF value 0.076 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M5 is not defined in the cap table. Therefore, the LEF value 0.044 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M6 is not defined in the cap table. Therefore, the LEF value 0.076 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M7 is not defined in the cap table. Therefore, the LEF value 0.076 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M8 is not defined in the cap table. Therefore, the LEF value 0.076 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M9 is not defined in the cap table. Therefore, the LEF value 0.076 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M10 is not defined in the cap table. Therefore, the LEF value 0.076 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+Summary of Active RC-Corners : 
+ 
+ Analysis View: view_tt
+    RC-Corner Name        : rc_typical
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from Cap Table]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from Cap Table]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+Initializing multi-corner resistance tables ...
+tc_tt
+Start generating vias ..
+#Skip building auto via since it is not turned on.
+Via generation completed.
+% Begin Load power constraints ... (date=02/15 06:16:15, mem=2362.4M)
+'set_default_switching_activity' finished successfully.
+% End Load power constraints ... (date=02/15 06:16:15, total cpu=0:00:00.0, real=0:00:00.0, peak res=2370.0M, current mem=2370.0M)
+tc_tt
+% Begin load AAE data ... (date=02/15 06:16:15, mem=2409.9M)
+**WARN: (IMPESI-3505):	setDelayCalMode -eng_enablePrePlacedFlow false (default=false) will be obsoleted along with its sgs2set equivalent.  This parameter will continue to be supported in the current release, but will be removed in the next major release of the software.
+AAE DB initialization (MEM=2421.410156 CPU=0:00:00.0 REAL=0:00:00.0) 
+% End load AAE data ... (date=02/15 06:16:16, total cpu=0:00:00.7, real=0:00:01.0, peak res=2421.4M, current mem=2421.4M)
+Restoring CCOpt config...
+  Extracting original clock gating for clk...
+    clock_tree clk contains 1063 sinks and 0 clock gates.
+  Extracting original clock gating for clk done.
+  The skew group clk/func_mode was created. It contains 1063 sinks and 1 sources.
+  The skew group clk/func_mode was created. It contains 1063 sinks and 1 sources.
+Restoring CCOpt config done.
+Total number of combinational cells: 338
+Total number of sequential cells: 66
+Total number of tristate cells: 0
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: BUFx10_ASAP7_75t_SL BUFx12_ASAP7_75t_SL BUFx12f_ASAP7_75t_SL BUFx16f_ASAP7_75t_SL BUFx24_ASAP7_75t_SL BUFx2_ASAP7_75t_SL BUFx3_ASAP7_75t_SL BUFx4_ASAP7_75t_SL BUFx5_ASAP7_75t_SL BUFx4f_ASAP7_75t_SL BUFx6f_ASAP7_75t_SL BUFx8_ASAP7_75t_SL HB1xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_SL BUFx10_ASAP7_75t_L BUFx12_ASAP7_75t_L BUFx12f_ASAP7_75t_L BUFx16f_ASAP7_75t_L BUFx24_ASAP7_75t_L BUFx2_ASAP7_75t_L BUFx3_ASAP7_75t_L BUFx4_ASAP7_75t_L BUFx5_ASAP7_75t_L BUFx4f_ASAP7_75t_L BUFx6f_ASAP7_75t_L BUFx8_ASAP7_75t_L HB1xp67_ASAP7_75t_L
+Total number of usable buffers: 27
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CKINVDCx10_ASAP7_75t_SL CKINVDCx12_ASAP7_75t_SL CKINVDCx11_ASAP7_75t_SL CKINVDCx14_ASAP7_75t_SL CKINVDCx16_ASAP7_75t_SL CKINVDCx20_ASAP7_75t_SL CKINVDCx8_ASAP7_75t_SL CKINVDCx5p33_ASAP7_75t_SL CKINVDCx6p67_ASAP7_75t_SL CKINVDCx9p33_ASAP7_75t_SL INVx11_ASAP7_75t_SL INVx13_ASAP7_75t_SL INVx1_ASAP7_75t_SL INVx2_ASAP7_75t_SL INVx3_ASAP7_75t_SL INVx4_ASAP7_75t_SL INVx5_ASAP7_75t_SL INVx6_ASAP7_75t_SL INVx8_ASAP7_75t_SL INVxp67_ASAP7_75t_SL INVxp33_ASAP7_75t_SL CKINVDCx10_ASAP7_75t_L CKINVDCx12_ASAP7_75t_L CKINVDCx11_ASAP7_75t_L CKINVDCx14_ASAP7_75t_L CKINVDCx16_ASAP7_75t_L CKINVDCx20_ASAP7_75t_L CKINVDCx8_ASAP7_75t_L CKINVDCx5p33_ASAP7_75t_L CKINVDCx6p67_ASAP7_75t_L CKINVDCx9p33_ASAP7_75t_L INVx11_ASAP7_75t_L INVx13_ASAP7_75t_L INVx1_ASAP7_75t_L INVx2_ASAP7_75t_L INVx3_ASAP7_75t_L INVx4_ASAP7_75t_L INVx5_ASAP7_75t_L INVx6_ASAP7_75t_L INVx8_ASAP7_75t_L INVxp67_ASAP7_75t_L INVxp33_ASAP7_75t_L
+Total number of usable inverters: 42
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: HB3xp67_ASAP7_75t_SL HB4xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_L HB3xp67_ASAP7_75t_L HB4xp67_ASAP7_75t_L
+Total number of identified usable delay cells: 5
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+**WARN: (IMPCTE-107):	The following globals have been obsoleted since version (null). They will be removed in the next release. 
+timing_aocv_enable_gba_combine_launch_capture
+timing_enable_backward_compatible_latch_thru_mt_mode
+timing_enable_separate_device_slew_effect_sensitivities
+#% End load design ... (date=02/15 06:16:16, total cpu=0:00:15.7, real=0:00:16.0, peak res=2443.6M, current mem=2430.0M)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPEXT-2766         10  The sheet resistance for layer %s is not...
+WARNING   IMPEXT-2773         10  The via resistance between layers %s and...
+WARNING   IMPESI-3505          1  setDelayCalMode -eng_%s (default=%s) wil...
+WARNING   IMPOPT-3602          1  The specified path group name %s is not ...
+WARNING   IMPTR-2106           1  There is no track defined on layer %s. T...
+WARNING   NRDB-2106            1  Ignoring layer %s MINIMUMCUT rule with W...
+WARNING   NRDB-411             3  spacing table for %s %s is already defin...
+WARNING   IMPCTE-107           1  The following globals have been obsolete...
+WARNING   IMPTCM-77            1  Option "%s" for command %s is obsolete a...
+WARNING   TECHLIB-1277         4  The %s '%s' has been defined for %s %s '...
+*** Message Summary: 33 warning(s), 0 error(s)
+
+<CMD> zoomBox -188.42025 -121.78575 641.48650 304.39600
+<CMD> zoomBox -62.84600 5.03200 250.15350 165.76650
+<CMD> zoomBox -12.10600 51.90350 151.28225 135.80825
+<CMD> zoomBox -3.79425 59.58150 135.08600 130.90075
+<CMD> zoomBox 18.71875 80.37850 91.21600 117.60800
+<CMD> zoomBox -12.10800 51.90225 151.28375 135.80875
+<CMD> zoomBox -62.79750 5.02875 250.21050 165.76775
+<CMD> zoomBox -128.78925 -55.99550 380.89250 205.74125
+<CMD> selectWire 56.5840 76.9960 56.6560 78.0040 3 TIE_LTIEHI_70_NET
+<CMD> deselectAll
+<CMD> selectInst FILLER_T_4_3660
+<CMD> deselectAll
+<CMD> zoomBox 0.27450 41.27850 266.33200 177.90700
+<CMD> zoomBox 122.95925 113.80750 184.58325 145.45325
+<CMD> zoomBox 151.60275 130.57775 165.87650 137.90775
+<CMD> zoomBox 157.93400 134.23075 161.82375 136.22825
+<CMD> zoomBox 148.25800 128.65500 168.01700 138.80175
+<CMD> zoomBox 98.89100 100.66900 199.25725 152.21000
+<CMD> zoomBox -2.68375 43.78125 263.43425 180.44075
+<CMD> zoomBox -271.71450 -106.85500 433.89050 255.49425
+<CMD> zoomBox -210.61625 -74.14175 389.14850 233.85525
+<CMD> zoomBox -158.68225 -46.33550 351.11775 215.46200
+<CMD> zoomBox -114.53875 -22.70025 318.79150 199.82775
+<CMD> zoomBox -29.28750 19.16625 283.79425 179.94300
+<CMD> zoomBox 94.18875 79.80475 233.10525 151.14250
+<CMD> zoomBox 165.83825 114.99125 203.69175 134.43025
+<CMD> zoomBox 185.36150 124.57900 195.67675 129.87625
+<CMD> zoomBox 190.36775 127.03175 193.67475 128.73000
+<CMD> selectObject IO_Pin {rd_data[3][0]}
+<CMD> zoomBox 183.47025 123.75825 195.60825 129.99150
+<CMD> zoomBox 151.84650 109.10850 204.25275 136.02075
+<CMD> zoomBox 42.04875 58.20575 234.37350 156.97025
+<CMD> zoomBox -274.62650 -84.93525 325.30675 223.14825
+<CMD> zoomBox -356.87825 -122.11425 348.92550 240.33700
+<CMD> zoomBox -274.62675 -84.93550 325.30675 223.14825
+<CMD> deselectAll
+<CMD> zoomBox 8.39075 79.44200 147.34625 150.79975
+<CMD> zoomBox 73.94275 117.51425 106.12775 134.04225
+<CMD> zoomBox 89.12575 126.33250 96.58050 130.16075
+<CMD> zoomBox 92.23525 128.13850 94.62525 129.36575
+<CMD> selectWire 94.0240 128.8360 94.0960 129.7000 3 FE_OFN65_n_1
+<CMD> zoomBox 89.28675 126.59500 95.62475 129.84975
+<CMD> zoomBox 79.31850 121.50775 99.09000 131.66100
+<CMD> zoomBox 55.12775 109.22075 107.55225 136.14225
+<CMD> zoomBox -27.07250 67.64050 136.46025 151.61950
+<CMD> zoomBox -137.73850 11.72200 175.54025 172.60000
+<CMD> zoomBox -283.21100 -61.78375 226.91125 200.17925
+<CMD> zoomBox -14.15150 70.76600 149.38225 154.74550
+<CMD> zoomBox 20.53700 100.33150 105.90325 144.16950
+<CMD> zoomBox 26.21950 105.17475 98.78075 142.43700
+<CMD> zoomBox 14.78600 89.20375 132.94000 149.87925
+<CMD> zoomBox 6.91225 81.93175 145.91675 153.31475
+<CMD> zoomBox 55.69500 113.39350 100.25725 136.27750
+<CMD> zoomBox 70.09825 122.72275 86.90550 131.35375
+<CMD> zoomBox 47.02500 106.23175 108.70650 137.90700
+<CMD> zoomBox -20.10750 58.18425 172.30150 156.99200
+<CMD> zoomBox -183.09475 -58.75400 327.07225 203.23200
+<CMD> deselectAll
+<CMD> zoomBox -214.87300 -87.66300 385.32350 220.55575
+<CMD> fit
+<CMD> zoomBox -209.02100 -83.80225 103.56150 196.02575
+<CMD> zoomBox -527.51700 -320.73800 176.96525 309.92400
+<CMD> zoomBox -843.80075 -667.89900 505.76675 540.25200
+<CMD> zoomBox -387.31775 -246.46600 317.16500 384.19650
+<CMD> zoomBox -142.06125 -42.15800 225.68350 287.05200
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> zoomBox -61.26675 14.87325 204.42875 252.72750
+<CMD> zoomBox -29.71350 37.14625 196.12800 239.32250
+<CMD> zoomBox -2.58625 60.59225 189.37900 232.44200
+<CMD> zoomBox 20.47200 80.52125 183.64250 226.59375
+<CMD> zoomBox 40.07125 97.46100 178.76650 221.62275
+<CMD> zoomBox 56.73075 111.85975 174.62175 217.39725
+<CMD> zoomBox 101.85550 150.86050 163.39550 205.95200
+<CMD> zoomBox 109.24725 157.24925 161.55650 204.07725
+<CMD> zoomBox 129.26925 174.55425 156.57500 198.99875
+<CMD> zoomBox 132.54900 177.38875 155.75900 198.16675
+<CMD> zoomBox 101.85375 150.85950 163.39550 205.95250
+<CMD> zoomBox 20.46700 80.51750 183.64300 226.59475
+<CMD> selectInst {u_array_gen_row[3].gen_col[2].u_pe_csa_tree_ADD_TC_OP_groupi_g2359}
+<CMD> deselectAll
+<CMD> fit
