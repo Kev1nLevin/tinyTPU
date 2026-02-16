@@ -1,0 +1,23 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-MESSAGES
++EMGRLOG
+sim_8x8.log
+-XLSTIME
+1771219947
+-XLKEEP
+-XLMODE
+./xcelium.d/run.lnx8664.24.03.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx8664.24.03.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.24.03.d/hdl.var
+-XLNAME
+xrun
+-XLVERSION
+"TOOL:	xrun(64)	24.03-s001"
+-XLNAME
+./xcelium.d/run.lnx8664.24.03.d/raindrop_937fcf7b-8e9f-4d36-a271-fe6ecf14442e

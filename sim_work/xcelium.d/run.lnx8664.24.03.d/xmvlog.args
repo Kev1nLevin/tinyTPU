@@ -1,0 +1,26 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx8664.24.03.d
+-RUNMODE
+-sv
+../rtl/mac_unit.sv
+../rtl/processing_element.sv
+../rtl/systolic_array_4x4.sv
+../rtl/input_skew_controller.sv
+../rtl/systolic_controller.sv
+../rtl/systolic_top.sv
+../tb/tb_systolic_top.sv
+-CDSLIB
+./xcelium.d/run.lnx8664.24.03.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.24.03.d/hdlrun.var
+-no_analogsolver
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx8664.24.03.d/xllibs
+-ALLOWUNBOUND
+-hastop

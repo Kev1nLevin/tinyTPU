@@ -1,0 +1,101 @@
+xrun(64): 24.03-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.03-s001: Started on Feb 15, 2026 at 23:32:27 CST
+xrun
+	-sv
+	-64bit
+	-access +rwc
+	-timescale 1ns/1ps
+	../rtl/mac_unit.sv
+	../rtl/processing_element.sv
+	../rtl/systolic_array_4x4.sv
+	../rtl/input_skew_controller.sv
+	../rtl/systolic_controller.sv
+	../rtl/systolic_top.sv
+	../tb/tb_systolic_top.sv
+	-top tb_systolic_top
+	-l sim_8x8.log
+Recompiling... reason: file '../rtl/systolic_controller.sv' is newer than expected.
+	expected: Mon Feb 16 05:12:18 2026
+	actual:   Mon Feb 16 05:30:40 2026
+file: ../rtl/systolic_controller.sv
+	module worklib.systolic_controller:sv
+		errors: 0, warnings: 0
+file: ../rtl/systolic_top.sv
+	module worklib.systolic_top:sv
+		errors: 0, warnings: 0
+file: ../tb/tb_systolic_top.sv
+	module worklib.tb_systolic_top:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_systolic_top
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.systolic_controller:sv <0x0e33ceb8>
+			streams:   7, words:  3721
+		worklib.systolic_top:sv <0x68a8cfdb>
+			streams:  26, words: 21878
+		worklib.tb_systolic_top:sv <0x3f79acd6>
+			streams:  36, words: 56596
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:               134       7
+		Registers:             579      97
+		Scalar wires:           33       -
+		Vectored wires:        878       -
+		Always blocks:         150      11
+		Initial blocks:          7       7
+		Parallel blocks:         1       1
+		Cont. assignments:     226      14
+		Pseudo assignments:    413       -
+		Process Clocks:        146       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_systolic_top:sv
+Loading snapshot worklib.tb_systolic_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /home/kevinlevin/cadence/XCELIUM2403/tools/xcelium/files/xmsimrc
+xcelium> run
+==========================================================
+  8x8 Systolic Array - Neural Network MAC Accelerator
+  Verification Testbench
+==========================================================
+
+========== TEST 1: Identity Matrix (8x8) ==========
+
+--- Identity Multiply ---
+  >> Identity Multiply PASSED
+
+========== TEST 2: Known Values ==========
+
+--- Known Values ---
+  >> Known Values PASSED
+
+========== TEST 3: Random Matrices ==========
+
+--- Random Matrices ---
+  >> Random Matrices PASSED
+
+========== TEST 4: Back-to-Back ==========
+
+--- Back-to-Back ---
+  >> Back-to-Back PASSED
+
+========== TEST 5: Signed Numbers ==========
+
+--- Signed Numbers ---
+  >> Signed Numbers PASSED
+
+==========================================================
+  TEST SUMMARY (8x8 Array)
+  Passed: 5 / 5
+  Failed: 0 / 5
+  >>> ALL TESTS PASSED <<<
+==========================================================
+
+Simulation complete via $finish(1) at time 432 NS + 0
+../tb/tb_systolic_top.sv:290         $finish;
+xcelium> exit
+TOOL:	xrun(64)	24.03-s001: Exiting on Feb 15, 2026 at 23:32:29 CST  (total: 00:00:02)

@@ -1,0 +1,85 @@
+catch { setDesignMode -bottomRoutingLayer 2 }
+catch { setDesignMode -process 45 }
+catch { setDesignMode -topRoutingLayer 7 }
+catch { setAnalysisMode -analysisType onChipVariation }
+catch { setAnalysisMode -checkType setup }
+catch { setAnalysisMode -clkSrcPath true }
+catch { setAnalysisMode -clockPropagation sdcControl }
+catch { setAnalysisMode -cppr both }
+catch { setAnalysisMode -usefulSkew true }
+catch { setOptMode -opt_view_pruning_hold_views_active_list { view_tt } }
+catch { setOptMode -opt_view_pruning_setup_views_active_list { view_tt } }
+catch { setOptMode -opt_view_pruning_hold_views_persistent_list { view_tt} }
+catch { setOptMode -opt_view_pruning_setup_views_persistent_list { view_tt} }
+catch { setOptMode -opt_view_pruning_tdgr_setup_views_persistent_list { view_tt} }
+catch { setOptMode -opt_view_pruning_hold_target_slack_auto_flow 200 }
+catch { setOptMode -opt_delete_insts true }
+catch { setOptMode -opt_drv_margin 0 }
+catch { setOptMode -opt_drv true }
+catch { setOptMode -opt_hold_target_slack 0.02 }
+catch { setOptMode -opt_resize_flip_flops true }
+catch { setOptMode -opt_preserve_all_sequential false }
+catch { setOptMode -opt_setup_target_slack 0.02 }
+catch { setPathGroupOptions tdgp_reg2reg_default -effortLevel high }
+catch { setPathGroupOptions tdgp_reg2reg_default -late -slackAdjustment -0 }
+catch { setExtractRCMode  -engine postRoute -total_c_th 0 -relative_c_th 1 -coupling_c_th 0.1 -minNetTermNrToBeInMem 50 }
+catch {setNanoRouteMode -quiet -route_detail_antenna_factor 1.000000}
+catch {setNanoRouteMode -quiet -route_detail_post_route_spread_wire "auto"}
+catch {setNanoRouteMode -quiet -drouteStartIteration 0}
+catch {setNanoRouteMode -quiet -route_detail_use_min_spacing_for_blockage auto}
+catch {setNanoRouteMode -quiet -route_extract_third_party_compatible false}
+catch {setNanoRouteMode -quiet -route_global_exp_timing_driven_std_delay 6.100000}
+catch {setNanoRouteMode -quiet -route_global_exp_timing_driven_use_tif_timing_engine_for_import_design false}
+catch {setNanoRouteMode -quiet -route_exp_design_mode_bottom_routing_layer 2}
+catch {setNanoRouteMode -quiet -route_exp_design_mode_top_routing_layer 7}
+catch {setNanoRouteMode -quiet -route_si_effort "high"}
+catch {setNanoRouteMode -quiet -route_strict_honor_route_rule "false"}
+catch {setNanoRouteMode -quiet -route_with_si_driven true}
+catch {setNanoRouteMode -quiet -route_with_si_post_route_fix false}
+catch {setNanoRouteMode -quiet -route_with_timing_driven true}
+
+catch { setPlaceMode -place_detail_dpt_flow true }
+catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepInstInSdc false -keepFlatten true }
+catch { setUsefulSkewMode -opt_skew_eco_route false }
+catch { setDelayCalMode -enable_hier_save_restore_flow false }
+catch { setDelayCalMode -enable_high_fanout true }
+catch { setDelayCalMode -enable_ideal_seq_async_pins false }
+catch { setDelayCalMode -eng_enablePrePlacedFlow false }
+catch { setDelayCalMode -engine aae }
+catch { setDelayCalMode -ignoreNetLoad false }
+catch { setDelayCalMode -SIAware true }
+catch { setDelayCalMode -socv_accuracy_mode low }
+catch { setPinAssignMode -pinEditInBatch false }
+catch { setAddRingMode -extend_over_row false }
+catch { setAddRingMode -ignore_rows false }
+catch { setAddRingMode -ring_target default }
+catch { setAddRingMode -stacked_via_bottom_layer M1 }
+catch { setAddRingMode -stacked_via_top_layer M7 }
+catch { setHierMode -disableArt false }
+catch { setHierMode -reportPostRouteArtTiming false }
+catch { setHierMode -trialRouteHonorReadOnly false }
+catch { setImportMode -discardFloatingVNets false }
+catch { setImportMode -keepEmptyModule true }
+catch { setTieHiLoMode -maxFanout 5 }
+catch { setSIMode -separate_delta_delay_on_data true }
+catch { setAddStripeMode -break_at none }
+catch { setAddStripeMode -ignore_block_check false }
+catch { setAddStripeMode -route_over_rows_only false }
+catch { setAddStripeMode -rows_without_stripes_only false }
+catch { setAddStripeMode -stacked_via_bottom_layer M1 }
+catch { setAddStripeMode -stacked_via_top_layer M4 }
+catch { setRouteMode -earlyGlobalRouteSecondPG false }
+catch { setFPlanMode -cellsForExtraSites {} }
+catch { setFPlanMode -defaultRowPatternSite {} }
+catch { setFPlanMode -defaultTechSite asap7sc7p5t }
+catch { setFPlanMode -disableEolBlockageOnEdges {} }
+catch { setFPlanMode -exp_dcls_region_options {} }
+catch { setFPlanMode -extraRowPattern {} }
+catch { setFPlanMode -extraSites {} }
+catch { setFPlanMode -firstRowSiteIndex 0 }
+catch { setFPlanMode -ignore_check_power_domain_overlap {} }
+catch { setFPlanMode -lastRowSiteIndex -1 }
+catch { setFPlanMode -maxIoHeight false }
+catch { setFPlanMode -place_check_ignore_fixed_cell_list {} }
+catch { setFPlanMode -powerRailLayer {} }
+catch { setFPlanMode -skipViolations {} }

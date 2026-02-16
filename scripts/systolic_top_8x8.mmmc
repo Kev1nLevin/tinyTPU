@@ -1,0 +1,40 @@
+# =============================================================================
+# MMMC (Multi-Mode Multi-Corner) Configuration - 8x8 Systolic Array
+# ASAP7 7nm, TT corner (0.7V, 25°C)
+# =============================================================================
+
+# ---- Library Sets ----
+create_library_set -name tt_libs \
+    -timing [list \
+        ../lib/asap7sc7p5t_AO_LVT_TT_nldm_211120.lib \
+        ../lib/asap7sc7p5t_INVBUF_LVT_TT_nldm_220122.lib \
+        ../lib/asap7sc7p5t_OA_LVT_TT_nldm_211120.lib \
+        ../lib/asap7sc7p5t_SEQ_LVT_TT_nldm_220123.lib \
+        ../lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib \
+        ../lib/asap7sc7p5t_AO_SLVT_TT_nldm_211120.lib \
+        ../lib/asap7sc7p5t_INVBUF_SLVT_TT_nldm_220122.lib \
+        ../lib/asap7sc7p5t_OA_SLVT_TT_nldm_211120.lib \
+        ../lib/asap7sc7p5t_SEQ_SLVT_TT_nldm_220123.lib \
+        ../lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib \
+    ]
+
+# ---- RC Corner ----
+create_rc_corner -name rc_typical \
+    -T 25
+
+# ---- Operating Condition + Delay Corner ----
+create_delay_corner -name dc_typical \
+    -library_set tt_libs \
+    -rc_corner rc_typical
+
+# ---- Constraint Mode (SDC from 8x8 synthesis) ----
+create_constraint_mode -name func_mode \
+    -sdc_files [list ../outputs/systolic_top_8x8.sdc]
+
+# ---- Analysis View ----
+create_analysis_view -name view_tt \
+    -constraint_mode func_mode \
+    -delay_corner dc_typical
+
+# ---- Active Views ----
+set_analysis_view -setup [list view_tt] -hold [list view_tt]

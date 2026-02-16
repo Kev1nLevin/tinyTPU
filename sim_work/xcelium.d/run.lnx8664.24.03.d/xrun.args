@@ -1,0 +1,21 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-sv
+-64bit
+-access
++rwc
+-timescale
+1ns/1ps
+../rtl/mac_unit.sv
+../rtl/processing_element.sv
+../rtl/systolic_array_4x4.sv
+../rtl/input_skew_controller.sv
+../rtl/systolic_controller.sv
+../rtl/systolic_top.sv
+../tb/tb_systolic_top.sv
+-top
+tb_systolic_top
+-l
+sim_8x8.log

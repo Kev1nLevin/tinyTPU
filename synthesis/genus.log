@@ -1,0 +1,230 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[23:42:39.286649] Configured Lic search path (23.02-s006): /home/kevinlevin/cadence/license.dat
+
+Version: 23.14-s090_1, built Thu Feb 27 08:49:50 PST 2025
+Options: -files ../scripts/genus_8x8.tcl 
+Date:    Sun Feb 15 23:42:39 2026
+Host:    raindrop (x86_64 w/Linux 5.14.0-611.27.1.el9_7.x86_64) (4cores*8cpus*1physical cpu*Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz 8192KB) (23998004KB)
+PID:     152344
+OS:      Red Hat Enterprise Linux 9.7 (Plow)
+
+Checking out license: Genus_Synthesis
+[23:42:40.106363] Periodic Lic check successful
+[23:42:40.106374] Feature usage summary:
+[23:42:40.106375] Genus_Synthesis
+
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (1 second elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (26 seconds elapsed).
+
+#@ Processing -files option
+@genus:root: 1> source ../scripts/genus_8x8.tcl
+#@ Begin verbose source ../scripts/genus_8x8.tcl
+@file(genus_8x8.tcl) 9: set RTL_PATH        "../rtl/"
+@file(genus_8x8.tcl) 10: set LIB_PATH        "../lib/"
+@file(genus_8x8.tcl) 11: set LEF_PATH        "../lef/scaled/"
+@file(genus_8x8.tcl) 12: set TLEF_PATH       "../techlef/"
+@file(genus_8x8.tcl) 13: set QRC_PATH        "../qrc/"
+@file(genus_8x8.tcl) 15: set DESIGN          "systolic_top"
+@file(genus_8x8.tcl) 16: set ARRAY_SIZE      8
+@file(genus_8x8.tcl) 20: set LIB_LIST { asap7sc7p5t_AO_LVT_TT_nldm_211120.lib   asap7sc7p5t_INVBUF_LVT_TT_nldm_220122.lib   asap7sc7p5t_OA_LVT_TT_nldm_211120.lib   asap7sc7p5t_SEQ_LVT_TT_nldm_220123.lib   asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib \
+              asap7sc7p5t_AO_SLVT_TT_nldm_211120.lib  asap7sc7p5t_INVBUF_SLVT_TT_nldm_220122.lib  asap7sc7p5t_OA_SLVT_TT_nldm_211120.lib  asap7sc7p5t_SEQ_SLVT_TT_nldm_220123.lib  asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib }
+@file(genus_8x8.tcl) 23: set LEF_LIST { asap7_tech_4x_201209.lef asap7sc7p5t_28_L_4x_220121a.lef asap7sc7p5t_28_SL_4x_220121a.lef }
+@file(genus_8x8.tcl) 26: set RTL_LIST { mac_unit.sv processing_element.sv systolic_array_4x4.sv input_skew_controller.sv systolic_controller.sv systolic_top.sv }
+@file(genus_8x8.tcl) 29: set_db init_lib_search_path "$LIB_PATH $LEF_PATH $TLEF_PATH"
+  Setting attribute of root '/': 'init_lib_search_path' = ../lib/ ../lef/scaled/ ../techlef/
+@file(genus_8x8.tcl) 30: set_db init_hdl_search_path $RTL_PATH
+  Setting attribute of root '/': 'init_hdl_search_path' = ../rtl/
+@file(genus_8x8.tcl) 31: set_db / .library "$LIB_LIST"
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_AO_LVT_TT_nldm_211120.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_INVBUF_LVT_TT_nldm_220122.lib'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_OA_LVT_TT_nldm_211120.lib'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_SEQ_LVT_TT_nldm_220123.lib'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_AO_SLVT_TT_nldm_211120.lib'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_INVBUF_SLVT_TT_nldm_220122.lib'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_OA_SLVT_TT_nldm_211120.lib'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_SEQ_SLVT_TT_nldm_220123.lib'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib'.
+  Setting attribute of root '/': 'library' =  asap7sc7p5t_AO_LVT_TT_nldm_211120.lib   asap7sc7p5t_INVBUF_LVT_TT_nldm_220122.lib   asap7sc7p5t_OA_LVT_TT_nldm_211120.lib   asap7sc7p5t_SEQ_LVT_TT_nldm_220123.lib   asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib  asap7sc7p5t_AO_SLVT_TT_nldm_211120.lib  asap7sc7p5t_INVBUF_SLVT_TT_nldm_220122.lib  asap7sc7p5t_OA_SLVT_TT_nldm_211120.lib  asap7sc7p5t_SEQ_SLVT_TT_nldm_220123.lib  asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib 
+@file(genus_8x8.tcl) 32: set_db lef_library "$LEF_LIST"
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'VIA9Pad' has no resistance value.
+        : If this is the expected behavior, this message can be ignored.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'VIA89' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'VIA78' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'VIA67' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'VIA56' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'VIA45' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'VIA34' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'VIA23' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'VIA12' has no resistance value.
+Warning : Site already defined before, duplicated site will be ignored. [PHYS-106]
+        : Site 'asap7sc7p5t' read already, this site in file '/home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../lef/scaled//asap7sc7p5t_28_SL_4x_220121a.lef' is ignored.
+
+  According to lef_library, there are total 10 routing layers [ V(5) / H(5) ]
+
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M1' [line 144 in file /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef]
+        : Check the wire parameter in LEF technology files.
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M2' [line 215 in file /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M3' [line 279 in file /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M4' [line 375 in file /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M5' [line 476 in file /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M6' [line 581 in file /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M7' [line 679 in file /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M8' [line 707 in file /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M9' [line 734 in file /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'Pad' [line 761 in file /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M1' [line 144 in file /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M2' [line 215 in file /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M3' [line 279 in file /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M4' [line 375 in file /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M5' [line 476 in file /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M6' [line 581 in file /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M7' [line 679 in file /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M8' [line 707 in file /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M9' [line 734 in file /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'Pad' [line 761 in file /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef]
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'PHYS-15'.
+Warning : The variant range of wire parameters is too large. An example of wire parameters are, a WIDTH for layer, PITCH for layer, MINSPACING for layers, etc. [PHYS-12]
+        : The variant range (0.072, 8) of 'WIDTH' for layers 'M3' and 'Pad' is too large.
+        : Check the consistency of the parameters, and see if you can ignore this message or you're using different LEF file with wrong parameters.
+Warning : The value of the wire parameter is too big. [PHYS-13]
+        : The 'WIDTH: 8' of layer 'Pad' is much bigger than others.
+        : Check the consistency of the specified wire parameter.
+Warning : The variant range of wire parameters is too large. An example of wire parameters are, a WIDTH for layer, PITCH for layer, MINSPACING for layers, etc. [PHYS-12]
+        : The variant range (0.144, 16) of 'PITCH' for layers 'M1' and 'Pad' is too large.
+Warning : The value of the wire parameter is too big. [PHYS-13]
+        : The 'PITCH: 16' of layer 'Pad' is much bigger than others.
+Warning : The variant range of wire parameters is too large. An example of wire parameters are, a WIDTH for layer, PITCH for layer, MINSPACING for layers, etc. [PHYS-12]
+        : The variant range (0.012, 8) of 'OFFSET' for layers 'M4' and 'Pad' is too large.
+Warning : The value of the wire parameter is too big. [PHYS-13]
+        : The 'OFFSET: 8' of layer 'Pad' is much bigger than others.
+Warning : The value of the wire parameter is too small. [PHYS-14]
+        : The 'OFFSET: 0.012' of layer 'M4' is much less than others.
+        : Check the consistency of the specified wire parameter.
+Warning : The value of the wire parameter is too small. [PHYS-14]
+        : The 'OFFSET: 0.012' of layer 'M4' is much less than others.
+Warning : The value of the wire parameter is too small. [PHYS-14]
+        : The 'OFFSET: 0.012' of layer 'M4' is much less than others.
+Warning : The value of the wire parameter is too small. [PHYS-14]
+        : The 'OFFSET: 0.012' of layer 'M4' is much less than others.
+Warning : The variant range of wire parameters is too large. An example of wire parameters are, a WIDTH for layer, PITCH for layer, MINSPACING for layers, etc. [PHYS-12]
+        : The variant range (0.072, 8) of 'MINSPACING' for layers 'M1' and 'Pad' is too large.
+Warning : The value of the wire parameter is too big. [PHYS-13]
+        : The 'MINSPACING: 8' of layer 'Pad' is much bigger than others.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell DECAPx10_ASAP7_75t_L cannot be found in library.
+        : Ensure that the proper library files are available and have been imported.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell DECAPx1_ASAP7_75t_L cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell DECAPx2_ASAP7_75t_L cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell DECAPx2b_ASAP7_75t_L cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell DECAPx4_ASAP7_75t_L cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell DECAPx6_ASAP7_75t_L cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILLER_ASAP7_75t_L cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILLERxp5_ASAP7_75t_L cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell TAPCELL_ASAP7_75t_L cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell TAPCELL_WITH_FILLER_ASAP7_75t_L cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell DECAPx10_ASAP7_75t_SL cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell DECAPx1_ASAP7_75t_SL cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell DECAPx2_ASAP7_75t_SL cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell DECAPx2b_ASAP7_75t_SL cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell DECAPx4_ASAP7_75t_SL cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell DECAPx6_ASAP7_75t_SL cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILLER_ASAP7_75t_SL cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILLERxp5_ASAP7_75t_SL cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell TAPCELL_ASAP7_75t_SL cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell TAPCELL_WITH_FILLER_ASAP7_75t_SL cannot be found in library.
+  Setting attribute of root '/': 'lef_library' = /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../techlef//asap7_tech_4x_201209.lef /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../lef/scaled//asap7sc7p5t_28_L_4x_220121a.lef /home/kevinlevin/Projects/Neural_Network_Accelerator/synthesis/../lef/scaled//asap7sc7p5t_28_SL_4x_220121a.lef
+@file(genus_8x8.tcl) 35: read_hdl -sv ${RTL_LIST}
+                    if (!rst_n || flush) begin
+                                  |
+Warning : Expecting comparison to a signal in the edge event list. [VLOGPT-431]
+        : in file '../rtl/input_skew_controller.sv' on line 46, column 35.
+        : Check all the edge event specifiers in the event list of an always block by an if-condition, except one. Take as clock, that one unchecked edge event.
+@file(genus_8x8.tcl) 38: elaborate $DESIGN -parameters {{ARRAY_SIZE 8}}
+  Libraries have 334 usable logic and 46 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'systolic_top_ARRAY_SIZE8' from file '../rtl/systolic_top.sv'.
+Error   : Unsynthesizable Process. [CDFG-364] [elaborate]
+        : in file '../rtl/input_skew_controller.sv' on line 45.
+        : Error during elaboration.
+Info    : Unable to elaborate the design. [ELAB-4]
+        : Module 'systolic_top_ARRAY_SIZE8' contains errors and cannot be elaborated.
+UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   elaborate
+#@ End verbose source ../scripts/genus_8x8.tcl
+1
+Encountered problems processing file: ../scripts/genus_8x8.tcl
+WARNING: This version of the tool is 353 days old.

@@ -1,0 +1,9 @@
+
+**Info: (IMPSP-2062): Some of the PG shapes may not be colorized properly in this design, users are required to run command colorizePowerMesh (CUI: add_power_mesh_colors) before any placement related commands!
+Begin checking placement ... (start mem=6550.5M, init mem=6550.5M)
+Overlapping with other instance:	1051
+*info: Placed = 33417         
+*info: Unplaced = 0           
+Placement Density:56.59%(72414/127946)
+Placement Density (including fixed std cells):56.59%(72414/127946)
+Finished checkPlace (total: cpu=0:00:01.6, real=0:00:00.0; vio checks: cpu=0:00:01.5, real=0:00:00.0; mem=6518.5M)

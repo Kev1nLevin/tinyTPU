@@ -1,0 +1,1053 @@
+VERSION {1.0}
+PTDEF {instance} {pin} {cell} {edge} {clock_edge} {clock} {phase}
+BANNER
+  {Module} {systolic_top_ARRAY_SIZE8}
+  {Timing} {LATE}
+  {Slew Propagation} {WORST}
+  {Operating Condition} {PVT_0P7V_25C}
+  {PVT Mode} {max}
+  {Tree Type} {worst_case}
+  {Process} {1.000}
+  {Voltage} {0.700}
+  {Temperature} {25.000}
+  {time unit} {1.000 ps}
+  {capacitance unit} {1.000 fF}
+  {resistance unit} {1.000 kOhm}
+  {TOOL} {v23.14-s088_1 ((64bit) 02/28/2025 12:25 (Linux 3.10.0-693.el7.x86_64))}
+  {DATE} {February 16, 2026}
+END_BANNER
+PATH 1
+  VIEW  view_tt
+  CHECK_TYPE {Late External Delay Assertion}
+  REF {} {}
+  ENDPT {} {rd_data[7][21]} {} {v} {leading} {clk} {clk(C)(P)(view_tt)*}
+  BEGINPT {} {rd_row_addr[0]} {} {v} {leading} {clk} {clk(D)(P)(view_tt)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {External Delay} {450.000}
+    {+} {Phase Shift} {1500.000}
+    {+} {CPPR Adjustment} {0.000}
+    {=} {Required Time} {1050.000}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {1028.400}
+    {=} {Slack Time} {21.600}
+  END_SLK_CLC
+  SLK 21.600
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {+} {Input Delay} {450.000}
+    {=} {Beginpoint Arrival Time} {450.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {rd_row_addr[0]} {v} {} {} {rd_row_addr[0]} {} {} {} {4.000} {2.632} {450.000} {471.600} {} {4} {(0.00, 259.64) } 
+    NET {} {} {} {} {} {rd_row_addr[0]} {} {4.700} {2.900} {5.500} {2.632} {454.700} {476.300} {} {} {} 
+    INST {g60896} {A} {v} {Y} {^} {} {INVx1_ASAP7_75t_SL} {5.400} {0.000} {8.000} {} {460.100} {481.700} {} {1} {(137.63, 257.29) (137.26, 257.69)} 
+    NET {} {} {} {} {} {n_6172} {} {0.000} {0.000} {8.000} {0.372} {460.100} {481.700} {} {} {} 
+    INST {g60880} {B} {^} {Y} {v} {} {NOR2xp33_ASAP7_75t_SL} {22.600} {0.500} {38.900} {} {482.700} {504.300} {} {2} {(137.16, 255.96) (137.24, 255.82)} 
+    NET {} {} {} {} {} {n_6184} {} {0.000} {0.000} {38.900} {1.132} {482.700} {504.300} {} {} {} 
+    INST {g60874} {B} {v} {Y} {v} {} {AND2x2_ASAP7_75t_SL} {51.700} {4.700} {63.400} {} {534.400} {556.000} {} {8} {(137.84, 257.29) (138.60, 257.61)} 
+    NET {} {} {} {} {} {n_6154} {} {0.700} {0.000} {63.400} {5.266} {535.100} {556.700} {} {} {} 
+    INST {FE_OFC2663_n_6154} {A} {v} {Y} {v} {} {BUFx8_ASAP7_75t_SL} {70.000} {0.000} {159.000} {} {605.100} {626.700} {} {64} {(168.08, 258.37) (169.64, 257.98)} 
+    NET {} {} {} {} {} {FE_OFN6289_n_6154} {} {28.700} {0.000} {176.800} {40.773} {633.800} {655.400} {} {} {} 
+    INST {FE_OFC2665_n_6154} {A} {v} {Y} {v} {} {BUFx4_ASAP7_75t_SL} {113.600} {3.700} {164.300} {} {747.400} {769.000} {} {50} {(293.80, 267.01) (294.69, 266.62)} 
+    NET {} {} {} {} {} {FE_OFN6288_n_6154} {} {16.600} {0.200} {167.800} {31.543} {764.000} {785.600} {} {} {} 
+    INST {g59213__1666} {B2} {v} {Y} {^} {} {AOI22xp5_ASAP7_75t_SL} {75.000} {21.300} {86.400} {} {839.000} {860.600} {} {1} {(318.42, 323.10) (318.27, 322.78)} 
+    NET {} {} {} {} {} {n_7629} {} {0.000} {0.000} {86.400} {0.510} {839.000} {860.600} {} {} {} 
+    INST {g59088__5122} {B} {^} {Y} {v} {} {NAND4xp25_ASAP7_75t_SL} {117.600} {42.700} {155.900} {} {956.600} {978.200} {} {1} {(318.42, 331.74) (318.79, 331.42)} 
+    NET {} {} {} {} {} {FE_OFN13034_rd_data_7__21} {} {0.000} {0.000} {155.900} {0.325} {956.600} {978.200} {} {} {} 
+    INST {FE_OFC3624_rd_data_7__21} {A} {v} {Y} {v} {} {HB1xp67_ASAP7_75t_L} {71.800} {2.200} {72.900} {} {1028.400} {1050.000} {} {1} {(319.07, 302.65) (319.65, 303.05)} 
+    NET {} {} {} {} {} {rd_data[7][21]} {} {0.000} {0.000} {72.900} {0.000} {1028.400} {1050.000} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_CAP_CLK_PATH
+END_PATH 1
+PATH 2
+  VIEW  view_tt
+  CHECK_TYPE {Late External Delay Assertion}
+  REF {} {}
+  ENDPT {} {rd_data[3][15]} {} {v} {leading} {clk} {clk(C)(P)(view_tt)*}
+  BEGINPT {} {rd_row_addr[0]} {} {v} {leading} {clk} {clk(D)(P)(view_tt)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {External Delay} {450.000}
+    {+} {Phase Shift} {1500.000}
+    {+} {CPPR Adjustment} {0.000}
+    {=} {Required Time} {1050.000}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {1021.000}
+    {=} {Slack Time} {29.000}
+  END_SLK_CLC
+  SLK 29.000
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {+} {Input Delay} {450.000}
+    {=} {Beginpoint Arrival Time} {450.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {rd_row_addr[0]} {v} {} {} {rd_row_addr[0]} {} {} {} {4.000} {2.632} {450.000} {479.000} {} {4} {(0.00, 259.64) } 
+    NET {} {} {} {} {} {rd_row_addr[0]} {} {4.700} {2.900} {5.500} {2.632} {454.700} {483.700} {} {} {} 
+    INST {g60896} {A} {v} {Y} {^} {} {INVx1_ASAP7_75t_SL} {5.400} {0.000} {8.000} {} {460.100} {489.100} {} {1} {(137.63, 257.29) (137.26, 257.69)} 
+    NET {} {} {} {} {} {n_6172} {} {0.000} {0.000} {8.000} {0.372} {460.100} {489.100} {} {} {} 
+    INST {g60880} {B} {^} {Y} {v} {} {NOR2xp33_ASAP7_75t_SL} {22.600} {0.500} {38.900} {} {482.700} {511.700} {} {2} {(137.16, 255.96) (137.24, 255.82)} 
+    NET {} {} {} {} {} {n_6184} {} {0.000} {0.000} {38.900} {1.132} {482.700} {511.700} {} {} {} 
+    INST {g60876} {B} {v} {Y} {v} {} {AND2x2_ASAP7_75t_SL} {35.700} {2.700} {32.200} {} {518.400} {547.400} {} {2} {(137.41, 254.05) (136.66, 253.74)} 
+    NET {} {} {} {} {} {n_6151} {} {0.000} {0.000} {32.200} {2.602} {518.400} {547.400} {} {} {} 
+    INST {FE_OFC1106_n_6151} {A} {v} {Y} {v} {} {BUFx10_ASAP7_75t_SL} {60.200} {2.600} {150.400} {} {578.600} {607.600} {} {73} {(138.06, 250.81) (136.29, 251.21)} 
+    NET {} {} {} {} {} {FE_OFN6279_n_6151} {} {46.000} {1.600} {176.800} {55.458} {624.600} {653.600} {} {} {} 
+    INST {FE_OFC1111_n_6151} {A} {v} {Y} {v} {} {BUFx12_ASAP7_75t_SL} {70.100} {2.200} {92.700} {} {694.700} {723.700} {} {45} {(298.12, 209.77) (296.13, 210.17)} 
+    NET {} {} {} {} {} {FE_OFN6743_n_6151} {} {5.800} {0.300} {97.500} {27.957} {700.500} {729.500} {} {} {} 
+    INST {FE_OFC3611_n_6151} {A} {v} {Y} {v} {} {BUFx2_ASAP7_75t_SL} {73.800} {3.100} {101.900} {} {774.300} {803.300} {} {17} {(298.55, 191.41) (299.23, 191.02)} 
+    NET {} {} {} {} {} {FE_OFN13021_n} {} {0.700} {0.000} {102.000} {10.725} {775.000} {804.000} {} {} {} 
+    INST {g60204} {B2} {v} {Y} {^} {} {AOI22xp5_ASAP7_75t_SL} {69.600} {15.200} {100.300} {} {844.600} {873.600} {} {1} {(298.12, 178.38) (298.27, 178.06)} 
+    NET {} {} {} {} {} {n_6638} {} {0.000} {0.000} {100.300} {1.600} {844.600} {873.600} {} {} {} 
+    INST {g59046__7410} {A} {^} {Y} {v} {} {NAND4xp75_ASAP7_75t_SL} {91.300} {34.000} {110.900} {} {935.900} {964.900} {} {1} {(299.63, 168.66) (299.78, 168.98)} 
+    NET {} {} {} {} {} {FE_OFN6592_rd_data_3__15} {} {0.700} {0.300} {110.900} {0.333} {936.600} {965.600} {} {} {} 
+    INST {FE_OFC858_rd_data_3__15} {A} {v} {Y} {v} {} {HB1xp67_ASAP7_75t_SL} {84.400} {8.900} {106.100} {} {1021.000} {1050.000} {} {1} {(334.40, 167.65) (334.99, 167.26)} 
+    NET {} {} {} {} {} {rd_data[3][15]} {} {0.000} {0.000} {106.100} {0.000} {1021.000} {1050.000} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_CAP_CLK_PATH
+END_PATH 2
+PATH 3
+  VIEW  view_tt
+  CHECK_TYPE {Late External Delay Assertion}
+  REF {} {}
+  ENDPT {} {rd_data[1][0]} {} {v} {leading} {clk} {clk(C)(P)(view_tt)*}
+  BEGINPT {} {rd_row_addr[2]} {} {v} {leading} {clk} {clk(D)(P)(view_tt)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {External Delay} {450.000}
+    {+} {Phase Shift} {1500.000}
+    {+} {CPPR Adjustment} {0.000}
+    {=} {Required Time} {1050.000}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {1019.800}
+    {=} {Slack Time} {30.200}
+  END_SLK_CLC
+  SLK 30.200
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {+} {Input Delay} {450.000}
+    {=} {Beginpoint Arrival Time} {450.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {rd_row_addr[2]} {v} {} {} {rd_row_addr[2]} {} {} {} {4.000} {2.679} {450.000} {480.200} {} {4} {(0.00, 255.61) } 
+    NET {} {} {} {} {} {rd_row_addr[2]} {} {1.400} {1.400} {4.000} {2.679} {451.400} {481.600} {} {} {} 
+    INST {g60897} {A} {v} {Y} {^} {} {INVx1_ASAP7_75t_SL} {5.800} {0.100} {7.500} {} {457.200} {487.400} {} {1} {(140.22, 257.29) (140.59, 257.69)} 
+    NET {} {} {} {} {} {n_6171} {} {0.000} {0.000} {7.500} {0.372} {457.200} {487.400} {} {} {} 
+    INST {g60879} {B} {^} {Y} {v} {} {NOR2xp33_ASAP7_75t_SL} {21.900} {1.100} {36.600} {} {479.100} {509.300} {} {2} {(139.75, 257.54) (139.83, 257.69)} 
+    NET {} {} {} {} {} {n_6185} {} {0.000} {0.000} {36.600} {1.129} {479.100} {509.300} {} {} {} 
+    INST {g60873} {B} {v} {Y} {^} {} {NAND2xp5_ASAP7_75t_SL} {27.300} {0.100} {42.600} {} {506.400} {536.600} {} {1} {(140.83, 255.96) (141.01, 255.82)} 
+    NET {} {} {} {} {} {n_6186} {} {0.000} {0.000} {42.600} {3.142} {506.400} {536.600} {} {} {} 
+    INST {FE_OFC2631_n_6186} {A} {^} {Y} {v} {} {INVx5_ASAP7_75t_SL} {52.000} {2.300} {118.300} {} {558.400} {588.600} {} {28} {(141.73, 256.21) (142.53, 255.82)} 
+    NET {} {} {} {} {} {n_6155} {} {17.600} {0.500} {123.700} {17.419} {576.000} {606.200} {} {} {} 
+    INST {FE_OFC3296_n_6155} {A} {v} {Y} {v} {} {BUFx10_ASAP7_75t_SL} {64.200} {1.700} {147.100} {} {640.200} {670.400} {} {75} {(267.66, 163.33) (269.43, 162.94)} 
+    NET {} {} {} {} {} {FE_OFN6725_n_6186} {} {55.200} {1.300} {187.700} {48.396} {695.400} {725.600} {} {} {} 
+    INST {g59741} {A2} {v} {Y} {^} {} {AOI22xp5_ASAP7_75t_SL} {139.600} {54.400} {160.400} {} {835.000} {865.200} {} {1} {(224.89, 48.87) (224.52, 48.46)} 
+    NET {} {} {} {} {} {n_7101} {} {0.000} {0.000} {160.400} {0.325} {835.000} {865.200} {} {} {} 
+    INST {FE_OFC3491_n_7101} {A} {^} {Y} {^} {} {HB1xp67_ASAP7_75t_L} {58.500} {5.600} {64.900} {} {893.500} {923.700} {} {1} {(177.16, 48.85) (177.74, 48.46)} 
+    NET {} {} {} {} {} {FE_OFN13001_n_7101} {} {0.000} {0.000} {64.900} {0.508} {893.500} {923.700} {} {} {} 
+    INST {g58932__2346} {C} {^} {Y} {v} {} {NAND4xp25_ASAP7_75t_SL} {35.000} {0.900} {90.300} {} {928.500} {958.700} {} {1} {(177.16, 65.12) (177.74, 65.45)} 
+    NET {} {} {} {} {} {FE_OFN6653_rd_data_1__0} {} {0.000} {0.000} {90.300} {0.566} {928.500} {958.700} {} {} {} 
+    INST {FE_OFC919_rd_data_1__0} {A} {v} {Y} {v} {} {BUFx2_ASAP7_75t_SL} {86.600} {11.200} {115.500} {} {1015.100} {1045.300} {} {1} {(178.45, 73.69) (179.14, 74.09)} 
+    NET {} {} {} {} {} {rd_data[1][0]} {} {4.700} {0.500} {115.800} {0.000} {1019.800} {1050.000} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_CAP_CLK_PATH
+END_PATH 3
+PATH 4
+  VIEW  view_tt
+  CHECK_TYPE {Late External Delay Assertion}
+  REF {} {}
+  ENDPT {} {rd_data[0][12]} {} {v} {leading} {clk} {clk(C)(P)(view_tt)*}
+  BEGINPT {} {rd_row_addr[0]} {} {v} {leading} {clk} {clk(D)(P)(view_tt)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {External Delay} {450.000}
+    {+} {Phase Shift} {1500.000}
+    {+} {CPPR Adjustment} {0.000}
+    {=} {Required Time} {1050.000}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {1017.500}
+    {=} {Slack Time} {32.500}
+  END_SLK_CLC
+  SLK 32.500
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {+} {Input Delay} {450.000}
+    {=} {Beginpoint Arrival Time} {450.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {rd_row_addr[0]} {v} {} {} {rd_row_addr[0]} {} {} {} {4.000} {2.632} {450.000} {482.500} {} {4} {(0.00, 259.64) } 
+    NET {} {} {} {} {} {rd_row_addr[0]} {} {4.700} {2.900} {5.500} {2.632} {454.700} {487.200} {} {} {} 
+    INST {g60896} {A} {v} {Y} {^} {} {INVx1_ASAP7_75t_SL} {5.400} {0.000} {8.000} {} {460.100} {492.600} {} {1} {(137.63, 257.29) (137.26, 257.69)} 
+    NET {} {} {} {} {} {n_6172} {} {0.000} {0.000} {8.000} {0.372} {460.100} {492.600} {} {} {} 
+    INST {g60880} {B} {^} {Y} {v} {} {NOR2xp33_ASAP7_75t_SL} {22.600} {0.500} {38.900} {} {482.700} {515.200} {} {2} {(137.16, 255.96) (137.24, 255.82)} 
+    NET {} {} {} {} {} {n_6184} {} {0.000} {0.000} {38.900} {1.132} {482.700} {515.200} {} {} {} 
+    INST {g60876} {B} {v} {Y} {v} {} {AND2x2_ASAP7_75t_SL} {35.700} {2.700} {32.200} {} {518.400} {550.900} {} {2} {(137.41, 254.05) (136.66, 253.74)} 
+    NET {} {} {} {} {} {n_6151} {} {0.000} {0.000} {32.200} {2.602} {518.400} {550.900} {} {} {} 
+    INST {FE_OFC1105_n_6151} {A} {v} {Y} {v} {} {BUFx10_ASAP7_75t_SL} {42.400} {1.800} {87.600} {} {560.800} {593.300} {} {50} {(128.99, 240.01) (130.75, 240.41)} 
+    NET {} {} {} {} {} {FE_OFN6278_n_6151} {} {28.600} {1.200} {104.700} {38.707} {589.400} {621.900} {} {} {} 
+    INST {FE_OFC1109_n_6151} {A} {v} {Y} {v} {} {HB1xp67_ASAP7_75t_SL} {96.100} {11.000} {128.600} {} {685.500} {718.000} {} {9} {(115.60, 101.77) (115.01, 102.17)} 
+    NET {} {} {} {} {} {FE_OFN6741_n_6151} {} {0.700} {0.000} {128.600} {5.678} {686.200} {718.700} {} {} {} 
+    INST {g59905} {B2} {v} {Y} {^} {} {AOI22xp5_ASAP7_75t_SL} {188.400} {87.200} {177.000} {} {874.600} {907.100} {} {1} {(109.12, 78.08) (109.27, 78.41)} 
+    NET {} {} {} {} {} {n_6937} {} {0.700} {0.200} {177.000} {0.555} {875.300} {907.800} {} {} {} 
+    INST {g58970__5526} {A} {^} {Y} {v} {} {NAND4xp25_ASAP7_75t_SL} {43.500} {3.200} {81.600} {} {918.800} {951.300} {} {1} {(150.37, 67.21) (150.52, 67.61)} 
+    NET {} {} {} {} {} {FE_OFN6667_rd_data_0__12} {} {0.000} {0.000} {81.600} {0.566} {918.800} {951.300} {} {} {} 
+    INST {FE_OFC1354_rd_data_0__12} {A} {v} {Y} {v} {} {BUFx2_ASAP7_75t_SL} {93.500} {14.400} {125.700} {} {1012.300} {1044.800} {} {1} {(155.34, 67.21) (156.03, 67.61)} 
+    NET {} {} {} {} {} {rd_data[0][12]} {} {5.200} {0.800} {126.000} {0.000} {1017.500} {1050.000} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_CAP_CLK_PATH
+END_PATH 4
+PATH 5
+  VIEW  view_tt
+  CHECK_TYPE {Late External Delay Assertion}
+  REF {} {}
+  ENDPT {} {rd_data[2][10]} {} {v} {leading} {clk} {clk(C)(P)(view_tt)*}
+  BEGINPT {} {rd_row_addr[0]} {} {v} {leading} {clk} {clk(D)(P)(view_tt)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {External Delay} {450.000}
+    {+} {Phase Shift} {1500.000}
+    {+} {CPPR Adjustment} {0.000}
+    {=} {Required Time} {1050.000}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {1017.200}
+    {=} {Slack Time} {32.800}
+  END_SLK_CLC
+  SLK 32.800
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {+} {Input Delay} {450.000}
+    {=} {Beginpoint Arrival Time} {450.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {rd_row_addr[0]} {v} {} {} {rd_row_addr[0]} {} {} {} {4.000} {2.632} {450.000} {482.800} {} {4} {(0.00, 259.64) } 
+    NET {} {} {} {} {} {rd_row_addr[0]} {} {4.700} {2.900} {5.500} {2.632} {454.700} {487.500} {} {} {} 
+    INST {g60896} {A} {v} {Y} {^} {} {INVx1_ASAP7_75t_SL} {5.400} {0.000} {8.000} {} {460.100} {492.900} {} {1} {(137.63, 257.29) (137.26, 257.69)} 
+    NET {} {} {} {} {} {n_6172} {} {0.000} {0.000} {8.000} {0.372} {460.100} {492.900} {} {} {} 
+    INST {g60880} {B} {^} {Y} {v} {} {NOR2xp33_ASAP7_75t_SL} {22.600} {0.500} {38.900} {} {482.700} {515.500} {} {2} {(137.16, 255.96) (137.24, 255.82)} 
+    NET {} {} {} {} {} {n_6184} {} {0.000} {0.000} {38.900} {1.132} {482.700} {515.500} {} {} {} 
+    INST {g60876} {B} {v} {Y} {v} {} {AND2x2_ASAP7_75t_SL} {35.700} {2.700} {32.200} {} {518.400} {551.200} {} {2} {(137.41, 254.05) (136.66, 253.74)} 
+    NET {} {} {} {} {} {n_6151} {} {0.000} {0.000} {32.200} {2.602} {518.400} {551.200} {} {} {} 
+    INST {FE_OFC1105_n_6151} {A} {v} {Y} {v} {} {BUFx10_ASAP7_75t_SL} {42.400} {1.800} {87.600} {} {560.800} {593.600} {} {50} {(128.99, 240.01) (130.75, 240.41)} 
+    NET {} {} {} {} {} {FE_OFN6278_n_6151} {} {27.300} {1.100} {104.700} {38.707} {588.100} {620.900} {} {} {} 
+    INST {FE_OFC1107_n_6151} {A} {v} {Y} {v} {} {BUFx2_ASAP7_75t_L} {67.900} {2.900} {70.900} {} {656.000} {688.800} {} {15} {(169.81, 119.05) (170.50, 119.45)} 
+    NET {} {} {} {} {} {FE_OFN6280_n_6151} {} {0.400} {0.000} {70.900} {9.463} {656.400} {689.200} {} {} {} 
+    INST {g59190__5107} {B2} {v} {Y} {^} {} {AOI22xp5_ASAP7_75t_SL} {67.200} {13.500} {94.100} {} {723.600} {756.400} {} {1} {(177.59, 117.90) (177.74, 117.58)} 
+    NET {} {} {} {} {} {n_7652} {} {0.000} {0.000} {94.100} {0.333} {723.600} {756.400} {} {} {} 
+    INST {FE_OFC760_n_7652} {A} {^} {Y} {^} {} {HB1xp67_ASAP7_75t_SL} {99.100} {30.500} {120.400} {} {822.700} {855.500} {} {1} {(209.34, 116.89) (209.92, 117.29)} 
+    NET {} {} {} {} {} {FE_OFN6494_n_7652} {} {0.000} {0.000} {120.400} {0.555} {822.700} {855.500} {} {} {} 
+    INST {g58850__7410} {A} {^} {Y} {v} {} {NAND4xp25_ASAP7_75t_SL} {108.600} {37.900} {133.100} {} {931.300} {964.100} {} {1} {(254.70, 116.89) (254.55, 117.29)} 
+    NET {} {} {} {} {} {FE_OFN6618_rd_data_2__10} {} {0.000} {0.000} {133.100} {0.566} {931.300} {964.100} {} {} {} 
+    INST {FE_OFC884_rd_data_2__10} {A} {v} {Y} {v} {} {BUFx2_ASAP7_75t_SL} {83.100} {0.000} {119.100} {} {1014.400} {1047.200} {} {1} {(260.53, 129.85) (261.22, 130.25)} 
+    NET {} {} {} {} {} {rd_data[2][10]} {} {2.800} {0.000} {119.400} {0.000} {1017.200} {1050.000} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_CAP_CLK_PATH
+END_PATH 5
+PATH 6
+  VIEW  view_tt
+  CHECK_TYPE {Late External Delay Assertion}
+  REF {} {}
+  ENDPT {} {rd_data[6][15]} {} {v} {leading} {clk} {clk(C)(P)(view_tt)*}
+  BEGINPT {} {rd_row_addr[0]} {} {v} {leading} {clk} {clk(D)(P)(view_tt)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {External Delay} {450.000}
+    {+} {Phase Shift} {1500.000}
+    {+} {CPPR Adjustment} {0.000}
+    {=} {Required Time} {1050.000}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {1016.500}
+    {=} {Slack Time} {33.500}
+  END_SLK_CLC
+  SLK 33.500
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {+} {Input Delay} {450.000}
+    {=} {Beginpoint Arrival Time} {450.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {rd_row_addr[0]} {v} {} {} {rd_row_addr[0]} {} {} {} {4.000} {2.632} {450.000} {483.500} {} {4} {(0.00, 259.64) } 
+    NET {} {} {} {} {} {rd_row_addr[0]} {} {4.700} {2.900} {5.500} {2.632} {454.700} {488.200} {} {} {} 
+    INST {g60896} {A} {v} {Y} {^} {} {INVx1_ASAP7_75t_SL} {5.400} {0.000} {8.000} {} {460.100} {493.600} {} {1} {(137.63, 257.29) (137.26, 257.69)} 
+    NET {} {} {} {} {} {n_6172} {} {0.000} {0.000} {8.000} {0.372} {460.100} {493.600} {} {} {} 
+    INST {g60880} {B} {^} {Y} {v} {} {NOR2xp33_ASAP7_75t_SL} {22.600} {0.500} {38.900} {} {482.700} {516.200} {} {2} {(137.16, 255.96) (137.24, 255.82)} 
+    NET {} {} {} {} {} {n_6184} {} {0.000} {0.000} {38.900} {1.132} {482.700} {516.200} {} {} {} 
+    INST {g60874} {B} {v} {Y} {v} {} {AND2x2_ASAP7_75t_SL} {51.700} {4.700} {63.400} {} {534.400} {567.900} {} {8} {(137.84, 257.29) (138.60, 257.61)} 
+    NET {} {} {} {} {} {n_6154} {} {0.700} {0.000} {63.400} {5.266} {535.100} {568.600} {} {} {} 
+    INST {FE_OFC2663_n_6154} {A} {v} {Y} {v} {} {BUFx8_ASAP7_75t_SL} {70.000} {0.000} {159.000} {} {605.100} {638.600} {} {64} {(168.08, 258.37) (169.64, 257.98)} 
+    NET {} {} {} {} {} {FE_OFN6289_n_6154} {} {28.700} {0.000} {176.800} {40.773} {633.800} {667.300} {} {} {} 
+    INST {FE_OFC2665_n_6154} {A} {v} {Y} {v} {} {BUFx4_ASAP7_75t_SL} {113.600} {3.700} {164.300} {} {747.400} {780.900} {} {50} {(293.80, 267.01) (294.69, 266.62)} 
+    NET {} {} {} {} {} {FE_OFN6288_n_6154} {} {5.200} {0.100} {166.100} {31.543} {752.600} {786.100} {} {} {} 
+    INST {g59429} {B2} {v} {Y} {^} {} {AOI22xp5_ASAP7_75t_SL} {34.500} {0.000} {58.400} {} {787.100} {820.600} {} {1} {(295.31, 288.54) (295.46, 288.22)} 
+    NET {} {} {} {} {} {n_7413} {} {0.000} {0.000} {58.400} {0.508} {787.100} {820.600} {} {} {} 
+    INST {g58876__2346} {C} {^} {Y} {v} {} {NAND4xp25_ASAP7_75t_SL} {150.800} {64.500} {200.300} {} {937.900} {971.400} {} {1} {(295.31, 289.76) (295.89, 290.09)} 
+    NET {} {} {} {} {} {FE_OFN6537_rd_data_6__15} {} {0.000} {0.000} {200.300} {0.333} {937.900} {971.400} {} {} {} 
+    INST {FE_OFC803_rd_data_6__15} {A} {v} {Y} {v} {} {HB1xp67_ASAP7_75t_SL} {78.600} {3.700} {87.900} {} {1016.500} {1050.000} {} {1} {(308.92, 265.93) (309.50, 266.33)} 
+    NET {} {} {} {} {} {rd_data[6][15]} {} {0.000} {0.000} {87.900} {0.000} {1016.500} {1050.000} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_CAP_CLK_PATH
+END_PATH 6
+PATH 7
+  VIEW  view_tt
+  CHECK_TYPE {Late External Delay Assertion}
+  REF {} {}
+  ENDPT {} {rd_data[1][1]} {} {^} {leading} {clk} {clk(C)(P)(view_tt)*}
+  BEGINPT {} {rd_row_addr[2]} {} {^} {leading} {clk} {clk(D)(P)(view_tt)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {External Delay} {450.000}
+    {+} {Phase Shift} {1500.000}
+    {+} {CPPR Adjustment} {0.000}
+    {=} {Required Time} {1050.000}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {1015.300}
+    {=} {Slack Time} {34.700}
+  END_SLK_CLC
+  SLK 34.700
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {+} {Input Delay} {450.000}
+    {=} {Beginpoint Arrival Time} {450.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {rd_row_addr[2]} {^} {} {} {rd_row_addr[2]} {} {} {} {4.000} {2.675} {450.000} {484.700} {} {4} {(0.00, 255.61) } 
+    NET {} {} {} {} {} {rd_row_addr[2]} {} {1.400} {1.400} {4.000} {2.675} {451.400} {486.100} {} {} {} 
+    INST {g60897} {A} {^} {Y} {v} {} {INVx1_ASAP7_75t_SL} {4.900} {0.100} {6.100} {} {456.300} {491.000} {} {1} {(140.22, 257.29) (140.59, 257.69)} 
+    NET {} {} {} {} {} {n_6171} {} {0.000} {0.000} {6.100} {0.372} {456.300} {491.000} {} {} {} 
+    INST {g60879} {B} {v} {Y} {^} {} {NOR2xp33_ASAP7_75t_SL} {22.500} {1.200} {41.200} {} {478.800} {513.500} {} {2} {(139.75, 257.54) (139.83, 257.69)} 
+    NET {} {} {} {} {} {n_6185} {} {0.000} {0.000} {41.200} {1.128} {478.800} {513.500} {} {} {} 
+    INST {g60873} {B} {^} {Y} {v} {} {NAND2xp5_ASAP7_75t_SL} {24.700} {0.400} {42.300} {} {503.500} {538.200} {} {1} {(140.83, 255.96) (141.01, 255.82)} 
+    NET {} {} {} {} {} {n_6186} {} {0.000} {0.000} {42.300} {3.139} {503.500} {538.200} {} {} {} 
+    INST {FE_OFC2631_n_6186} {A} {v} {Y} {^} {} {INVx5_ASAP7_75t_SL} {69.200} {8.500} {144.400} {} {572.700} {607.400} {} {28} {(141.73, 256.21) (142.53, 255.82)} 
+    NET {} {} {} {} {} {n_6155} {} {18.400} {1.300} {148.700} {17.370} {591.100} {625.800} {} {} {} 
+    INST {FE_OFC3296_n_6155} {A} {^} {Y} {^} {} {BUFx10_ASAP7_75t_SL} {64.900} {2.700} {179.200} {} {656.000} {690.700} {} {75} {(267.66, 163.33) (269.43, 162.94)} 
+    NET {} {} {} {} {} {FE_OFN6725_n_6186} {} {56.300} {1.100} {215.500} {48.241} {712.300} {747.000} {} {} {} 
+    INST {g59732} {A2} {^} {Y} {v} {} {AOI22xp5_ASAP7_75t_SL} {81.100} {15.800} {122.800} {} {793.400} {828.100} {} {1} {(226.19, 47.76) (225.82, 48.17)} 
+    NET {} {} {} {} {} {n_7110} {} {0.000} {0.000} {122.800} {0.325} {793.400} {828.100} {} {} {} 
+    INST {FE_OFC716_n_7110} {A} {v} {Y} {v} {} {HB1xp67_ASAP7_75t_L} {97.300} {15.500} {105.800} {} {890.700} {925.400} {} {1} {(218.41, 69.37) (217.83, 69.77)} 
+    NET {} {} {} {} {} {FE_OFN6450_n_7110} {} {0.500} {0.100} {105.800} {0.502} {891.200} {925.900} {} {} {} 
+    INST {g58931__2883} {C} {v} {Y} {^} {} {NAND4xp25_ASAP7_75t_SL} {35.800} {3.100} {57.200} {} {927.000} {961.700} {} {1} {(171.32, 72.54) (170.74, 72.22)} 
+    NET {} {} {} {} {} {FE_OFN6652_rd_data_1__1} {} {0.000} {0.000} {57.200} {0.566} {927.000} {961.700} {} {} {} 
+    INST {FE_OFC1419_rd_data_1__1} {A} {^} {Y} {^} {} {BUFx2_ASAP7_75t_SL} {84.200} {13.500} {131.500} {} {1011.200} {1045.900} {} {1} {(173.92, 75.85) (174.60, 76.25)} 
+    NET {} {} {} {} {} {rd_data[1][1]} {} {4.100} {0.500} {131.500} {0.000} {1015.300} {1050.000} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_CAP_CLK_PATH
+END_PATH 7
+PATH 8
+  VIEW  view_tt
+  CHECK_TYPE {Late External Delay Assertion}
+  REF {} {}
+  ENDPT {} {rd_data[7][23]} {} {v} {leading} {clk} {clk(C)(P)(view_tt)*}
+  BEGINPT {} {rd_row_addr[0]} {} {v} {leading} {clk} {clk(D)(P)(view_tt)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {External Delay} {450.000}
+    {+} {Phase Shift} {1500.000}
+    {+} {CPPR Adjustment} {0.000}
+    {=} {Required Time} {1050.000}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {1010.300}
+    {=} {Slack Time} {39.700}
+  END_SLK_CLC
+  SLK 39.700
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {+} {Input Delay} {450.000}
+    {=} {Beginpoint Arrival Time} {450.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {rd_row_addr[0]} {v} {} {} {rd_row_addr[0]} {} {} {} {4.000} {2.632} {450.000} {489.700} {} {4} {(0.00, 259.64) } 
+    NET {} {} {} {} {} {rd_row_addr[0]} {} {4.700} {2.900} {5.500} {2.632} {454.700} {494.400} {} {} {} 
+    INST {g60896} {A} {v} {Y} {^} {} {INVx1_ASAP7_75t_SL} {5.400} {0.000} {8.000} {} {460.100} {499.800} {} {1} {(137.63, 257.29) (137.26, 257.69)} 
+    NET {} {} {} {} {} {n_6172} {} {0.000} {0.000} {8.000} {0.372} {460.100} {499.800} {} {} {} 
+    INST {g60880} {B} {^} {Y} {v} {} {NOR2xp33_ASAP7_75t_SL} {22.600} {0.500} {38.900} {} {482.700} {522.400} {} {2} {(137.16, 255.96) (137.24, 255.82)} 
+    NET {} {} {} {} {} {n_6184} {} {0.000} {0.000} {38.900} {1.132} {482.700} {522.400} {} {} {} 
+    INST {g60874} {B} {v} {Y} {v} {} {AND2x2_ASAP7_75t_SL} {51.700} {4.700} {63.400} {} {534.400} {574.100} {} {8} {(137.84, 257.29) (138.60, 257.61)} 
+    NET {} {} {} {} {} {n_6154} {} {0.700} {0.000} {63.400} {5.266} {535.100} {574.800} {} {} {} 
+    INST {FE_OFC2663_n_6154} {A} {v} {Y} {v} {} {BUFx8_ASAP7_75t_SL} {70.000} {0.000} {159.000} {} {605.100} {644.800} {} {64} {(168.08, 258.37) (169.64, 257.98)} 
+    NET {} {} {} {} {} {FE_OFN6289_n_6154} {} {28.700} {0.000} {176.800} {40.773} {633.800} {673.500} {} {} {} 
+    INST {FE_OFC2665_n_6154} {A} {v} {Y} {v} {} {BUFx4_ASAP7_75t_SL} {113.600} {3.700} {164.300} {} {747.400} {787.100} {} {50} {(293.80, 267.01) (294.69, 266.62)} 
+    NET {} {} {} {} {} {FE_OFN6288_n_6154} {} {16.200} {0.200} {167.800} {31.543} {763.600} {803.300} {} {} {} 
+    INST {g60241} {B2} {v} {Y} {^} {} {AOI22xp5_ASAP7_75t_SL} {54.900} {6.800} {77.400} {} {818.500} {858.200} {} {1} {(330.08, 322.16) (329.93, 322.49)} 
+    NET {} {} {} {} {} {n_6601} {} {0.000} {0.000} {77.400} {0.510} {818.500} {858.200} {} {} {} 
+    INST {g59022__5107} {B} {^} {Y} {v} {} {NAND4xp25_ASAP7_75t_SL} {191.100} {69.600} {267.800} {} {1009.600} {1049.300} {} {1} {(328.79, 331.74) (328.42, 331.42)} 
+    NET {} {} {} {} {} {rd_data[7][23]} {} {0.700} {0.000} {267.900} {0.000} {1010.300} {1050.000} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_CAP_CLK_PATH
+END_PATH 8
+PATH 9
+  VIEW  view_tt
+  CHECK_TYPE {Late External Delay Assertion}
+  REF {} {}
+  ENDPT {} {rd_data[7][10]} {} {v} {leading} {clk} {clk(C)(P)(view_tt)*}
+  BEGINPT {} {rd_row_addr[0]} {} {v} {leading} {clk} {clk(D)(P)(view_tt)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {External Delay} {450.000}
+    {+} {Phase Shift} {1500.000}
+    {+} {CPPR Adjustment} {0.000}
+    {=} {Required Time} {1050.000}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {1009.200}
+    {=} {Slack Time} {40.800}
+  END_SLK_CLC
+  SLK 40.800
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {+} {Input Delay} {450.000}
+    {=} {Beginpoint Arrival Time} {450.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {rd_row_addr[0]} {v} {} {} {rd_row_addr[0]} {} {} {} {4.000} {2.632} {450.000} {490.800} {} {4} {(0.00, 259.64) } 
+    NET {} {} {} {} {} {rd_row_addr[0]} {} {4.700} {2.900} {5.500} {2.632} {454.700} {495.500} {} {} {} 
+    INST {g60896} {A} {v} {Y} {^} {} {INVx1_ASAP7_75t_SL} {5.400} {0.000} {8.000} {} {460.100} {500.900} {} {1} {(137.63, 257.29) (137.26, 257.69)} 
+    NET {} {} {} {} {} {n_6172} {} {0.000} {0.000} {8.000} {0.372} {460.100} {500.900} {} {} {} 
+    INST {g60880} {B} {^} {Y} {v} {} {NOR2xp33_ASAP7_75t_SL} {22.600} {0.500} {38.900} {} {482.700} {523.500} {} {2} {(137.16, 255.96) (137.24, 255.82)} 
+    NET {} {} {} {} {} {n_6184} {} {0.000} {0.000} {38.900} {1.132} {482.700} {523.500} {} {} {} 
+    INST {g60876} {B} {v} {Y} {v} {} {AND2x2_ASAP7_75t_SL} {35.700} {2.700} {32.200} {} {518.400} {559.200} {} {2} {(137.41, 254.05) (136.66, 253.74)} 
+    NET {} {} {} {} {} {n_6151} {} {0.000} {0.000} {32.200} {2.602} {518.400} {559.200} {} {} {} 
+    INST {FE_OFC1106_n_6151} {A} {v} {Y} {v} {} {BUFx10_ASAP7_75t_SL} {60.200} {2.600} {150.400} {} {578.600} {619.400} {} {73} {(138.06, 250.81) (136.29, 251.21)} 
+    NET {} {} {} {} {} {FE_OFN6279_n_6151} {} {19.800} {0.700} {160.900} {55.458} {598.400} {639.200} {} {} {} 
+    INST {g59169__1617} {B2} {v} {Y} {^} {} {AOI22xp5_ASAP7_75t_SL} {148.200} {57.200} {151.000} {} {746.600} {787.400} {} {1} {(145.62, 332.96) (145.77, 333.29)} 
+    NET {} {} {} {} {} {n_7673} {} {0.000} {0.000} {151.000} {0.325} {746.600} {787.400} {} {} {} 
+    INST {FE_OFC762_n_7673} {A} {^} {Y} {^} {} {HB1xp67_ASAP7_75t_L} {103.000} {20.100} {131.900} {} {849.600} {890.400} {} {1} {(188.39, 332.89) (188.97, 333.29)} 
+    NET {} {} {} {} {} {FE_OFN6496_n_7673} {} {0.000} {0.000} {131.900} {0.555} {849.600} {890.400} {} {} {} 
+    INST {g59099__2883} {A} {^} {Y} {v} {} {NAND4xp25_ASAP7_75t_SL} {83.300} {6.000} {153.700} {} {932.900} {973.700} {} {1} {(225.76, 333.97) (225.91, 333.58)} 
+    NET {} {} {} {} {} {FE_OFN6521_rd_data_7__10} {} {0.000} {0.000} {153.700} {0.566} {932.900} {973.700} {} {} {} 
+    INST {FE_OFC787_rd_data_7__10} {A} {v} {Y} {v} {} {BUFx2_ASAP7_75t_SL} {73.600} {4.700} {83.300} {} {1006.500} {1047.300} {} {1} {(234.61, 318.85) (235.30, 318.46)} 
+    NET {} {} {} {} {} {rd_data[7][10]} {} {2.700} {0.300} {83.500} {0.000} {1009.200} {1050.000} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_CAP_CLK_PATH
+END_PATH 9
+PATH 10
+  VIEW  view_tt
+  CHECK_TYPE {Late External Delay Assertion}
+  REF {} {}
+  ENDPT {} {rd_data[7][25]} {} {v} {leading} {clk} {clk(C)(P)(view_tt)*}
+  BEGINPT {} {rd_row_addr[0]} {} {v} {leading} {clk} {clk(D)(P)(view_tt)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {External Delay} {450.000}
+    {+} {Phase Shift} {1500.000}
+    {+} {CPPR Adjustment} {0.000}
+    {=} {Required Time} {1050.000}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {1008.800}
+    {=} {Slack Time} {41.200}
+  END_SLK_CLC
+  SLK 41.200
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {+} {Input Delay} {450.000}
+    {=} {Beginpoint Arrival Time} {450.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {rd_row_addr[0]} {v} {} {} {rd_row_addr[0]} {} {} {} {4.000} {2.632} {450.000} {491.200} {} {4} {(0.00, 259.64) } 
+    NET {} {} {} {} {} {rd_row_addr[0]} {} {4.700} {2.900} {5.500} {2.632} {454.700} {495.900} {} {} {} 
+    INST {g60896} {A} {v} {Y} {^} {} {INVx1_ASAP7_75t_SL} {5.400} {0.000} {8.000} {} {460.100} {501.300} {} {1} {(137.63, 257.29) (137.26, 257.69)} 
+    NET {} {} {} {} {} {n_6172} {} {0.000} {0.000} {8.000} {0.372} {460.100} {501.300} {} {} {} 
+    INST {g60880} {B} {^} {Y} {v} {} {NOR2xp33_ASAP7_75t_SL} {22.600} {0.500} {38.900} {} {482.700} {523.900} {} {2} {(137.16, 255.96) (137.24, 255.82)} 
+    NET {} {} {} {} {} {n_6184} {} {0.000} {0.000} {38.900} {1.132} {482.700} {523.900} {} {} {} 
+    INST {g60874} {B} {v} {Y} {v} {} {AND2x2_ASAP7_75t_SL} {51.700} {4.700} {63.400} {} {534.400} {575.600} {} {8} {(137.84, 257.29) (138.60, 257.61)} 
+    NET {} {} {} {} {} {n_6154} {} {0.700} {0.000} {63.400} {5.266} {535.100} {576.300} {} {} {} 
+    INST {FE_OFC2663_n_6154} {A} {v} {Y} {v} {} {BUFx8_ASAP7_75t_SL} {70.000} {0.000} {159.000} {} {605.100} {646.300} {} {64} {(168.08, 258.37) (169.64, 257.98)} 
+    NET {} {} {} {} {} {FE_OFN6289_n_6154} {} {28.700} {0.000} {176.800} {40.773} {633.800} {675.000} {} {} {} 
+    INST {FE_OFC2665_n_6154} {A} {v} {Y} {v} {} {BUFx4_ASAP7_75t_SL} {113.600} {3.700} {164.300} {} {747.400} {788.600} {} {50} {(293.80, 267.01) (294.69, 266.62)} 
+    NET {} {} {} {} {} {FE_OFN6288_n_6154} {} {15.800} {0.200} {167.700} {31.543} {763.200} {804.400} {} {} {} 
+    INST {g59866} {B2} {v} {Y} {^} {} {AOI22xp5_ASAP7_75t_SL} {49.100} {0.000} {78.800} {} {812.300} {853.500} {} {1} {(336.35, 323.10) (336.50, 322.78)} 
+    NET {} {} {} {} {} {n_6976} {} {0.100} {0.000} {78.800} {0.510} {812.400} {853.600} {} {} {} 
+    INST {g58889__1617} {B} {^} {Y} {v} {} {NAND4xp25_ASAP7_75t_SL} {196.400} {86.700} {241.000} {} {1008.800} {1050.000} {} {1} {(337.21, 333.90) (337.58, 333.58)} 
+    NET {} {} {} {} {} {rd_data[7][25]} {} {0.000} {0.000} {241.000} {0.000} {1008.800} {1050.000} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_CAP_CLK_PATH
+END_PATH 10
+PATH 11
+  VIEW  view_tt
+  CHECK_TYPE {Late External Delay Assertion}
+  REF {} {}
+  ENDPT {} {rd_data[3][19]} {} {v} {leading} {clk} {clk(C)(P)(view_tt)*}
+  BEGINPT {} {rd_row_addr[0]} {} {v} {leading} {clk} {clk(D)(P)(view_tt)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {External Delay} {450.000}
+    {+} {Phase Shift} {1500.000}
+    {+} {CPPR Adjustment} {0.000}
+    {=} {Required Time} {1050.000}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {1008.100}
+    {=} {Slack Time} {41.900}
+  END_SLK_CLC
+  SLK 41.900
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {+} {Input Delay} {450.000}
+    {=} {Beginpoint Arrival Time} {450.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {rd_row_addr[0]} {v} {} {} {rd_row_addr[0]} {} {} {} {4.000} {2.632} {450.000} {491.900} {} {4} {(0.00, 259.64) } 
+    NET {} {} {} {} {} {rd_row_addr[0]} {} {4.700} {2.900} {5.500} {2.632} {454.700} {496.600} {} {} {} 
+    INST {g60896} {A} {v} {Y} {^} {} {INVx1_ASAP7_75t_SL} {5.400} {0.000} {8.000} {} {460.100} {502.000} {} {1} {(137.63, 257.29) (137.26, 257.69)} 
+    NET {} {} {} {} {} {n_6172} {} {0.000} {0.000} {8.000} {0.372} {460.100} {502.000} {} {} {} 
+    INST {g60880} {B} {^} {Y} {v} {} {NOR2xp33_ASAP7_75t_SL} {22.600} {0.500} {38.900} {} {482.700} {524.600} {} {2} {(137.16, 255.96) (137.24, 255.82)} 
+    NET {} {} {} {} {} {n_6184} {} {0.000} {0.000} {38.900} {1.132} {482.700} {524.600} {} {} {} 
+    INST {g60876} {B} {v} {Y} {v} {} {AND2x2_ASAP7_75t_SL} {35.700} {2.700} {32.200} {} {518.400} {560.300} {} {2} {(137.41, 254.05) (136.66, 253.74)} 
+    NET {} {} {} {} {} {n_6151} {} {0.000} {0.000} {32.200} {2.602} {518.400} {560.300} {} {} {} 
+    INST {FE_OFC1106_n_6151} {A} {v} {Y} {v} {} {BUFx10_ASAP7_75t_SL} {60.200} {2.600} {150.400} {} {578.600} {620.500} {} {73} {(138.06, 250.81) (136.29, 251.21)} 
+    NET {} {} {} {} {} {FE_OFN6279_n_6151} {} {46.000} {1.600} {176.800} {55.458} {624.600} {666.500} {} {} {} 
+    INST {FE_OFC1111_n_6151} {A} {v} {Y} {v} {} {BUFx12_ASAP7_75t_SL} {70.100} {2.200} {92.700} {} {694.700} {736.600} {} {45} {(298.12, 209.77) (296.13, 210.17)} 
+    NET {} {} {} {} {} {FE_OFN6743_n_6151} {} {5.800} {0.300} {97.500} {27.957} {700.500} {742.400} {} {} {} 
+    INST {FE_OFC3611_n_6151} {A} {v} {Y} {v} {} {BUFx2_ASAP7_75t_SL} {73.800} {3.100} {101.900} {} {774.300} {816.200} {} {17} {(298.55, 191.41) (299.23, 191.02)} 
+    NET {} {} {} {} {} {FE_OFN13021_n} {} {1.500} {0.200} {102.100} {10.725} {775.800} {817.700} {} {} {} 
+    INST {g60171} {B2} {v} {Y} {^} {} {AOI22xp5_ASAP7_75t_SL} {67.600} {3.600} {118.100} {} {843.400} {885.300} {} {1} {(313.02, 183.92) (313.17, 184.25)} 
+    NET {} {} {} {} {} {n_6671} {} {0.000} {0.000} {118.100} {0.555} {843.400} {885.300} {} {} {} 
+    INST {g59037__5115} {A} {^} {Y} {v} {} {NAND4xp25_ASAP7_75t_SL} {164.700} {40.900} {249.600} {} {1008.100} {1050.000} {} {1} {(313.67, 166.57) (313.52, 166.97)} 
+    NET {} {} {} {} {} {rd_data[3][19]} {} {0.000} {0.000} {249.600} {0.000} {1008.100} {1050.000} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_CAP_CLK_PATH
+END_PATH 11
+PATH 12
+  VIEW  view_tt
+  CHECK_TYPE {Late External Delay Assertion}
+  REF {} {}
+  ENDPT {} {rd_data[2][13]} {} {v} {leading} {clk} {clk(C)(P)(view_tt)*}
+  BEGINPT {} {rd_row_addr[0]} {} {v} {leading} {clk} {clk(D)(P)(view_tt)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {External Delay} {450.000}
+    {+} {Phase Shift} {1500.000}
+    {+} {CPPR Adjustment} {0.000}
+    {=} {Required Time} {1050.000}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {1007.200}
+    {=} {Slack Time} {42.800}
+  END_SLK_CLC
+  SLK 42.800
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {+} {Input Delay} {450.000}
+    {=} {Beginpoint Arrival Time} {450.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {rd_row_addr[0]} {v} {} {} {rd_row_addr[0]} {} {} {} {4.000} {2.632} {450.000} {492.800} {} {4} {(0.00, 259.64) } 
+    NET {} {} {} {} {} {rd_row_addr[0]} {} {4.700} {2.900} {5.500} {2.632} {454.700} {497.500} {} {} {} 
+    INST {g60896} {A} {v} {Y} {^} {} {INVx1_ASAP7_75t_SL} {5.400} {0.000} {8.000} {} {460.100} {502.900} {} {1} {(137.63, 257.29) (137.26, 257.69)} 
+    NET {} {} {} {} {} {n_6172} {} {0.000} {0.000} {8.000} {0.372} {460.100} {502.900} {} {} {} 
+    INST {g60880} {B} {^} {Y} {v} {} {NOR2xp33_ASAP7_75t_SL} {22.600} {0.500} {38.900} {} {482.700} {525.500} {} {2} {(137.16, 255.96) (137.24, 255.82)} 
+    NET {} {} {} {} {} {n_6184} {} {0.000} {0.000} {38.900} {1.132} {482.700} {525.500} {} {} {} 
+    INST {g60876} {B} {v} {Y} {v} {} {AND2x2_ASAP7_75t_SL} {35.700} {2.700} {32.200} {} {518.400} {561.200} {} {2} {(137.41, 254.05) (136.66, 253.74)} 
+    NET {} {} {} {} {} {n_6151} {} {0.000} {0.000} {32.200} {2.602} {518.400} {561.200} {} {} {} 
+    INST {FE_OFC1105_n_6151} {A} {v} {Y} {v} {} {BUFx10_ASAP7_75t_SL} {42.400} {1.800} {87.600} {} {560.800} {603.600} {} {50} {(128.99, 240.01) (130.75, 240.41)} 
+    NET {} {} {} {} {} {FE_OFN6278_n_6151} {} {27.300} {1.100} {104.700} {38.707} {588.100} {630.900} {} {} {} 
+    INST {FE_OFC1107_n_6151} {A} {v} {Y} {v} {} {BUFx2_ASAP7_75t_L} {67.900} {2.900} {70.900} {} {656.000} {698.800} {} {15} {(169.81, 119.05) (170.50, 119.45)} 
+    NET {} {} {} {} {} {FE_OFN6280_n_6151} {} {0.500} {0.000} {70.900} {9.463} {656.500} {699.300} {} {} {} 
+    INST {g59147__6131} {B2} {v} {Y} {^} {} {AOI22xp5_ASAP7_75t_SL} {101.000} {33.200} {125.200} {} {757.500} {800.300} {} {1} {(183.20, 115.74) (183.36, 115.42)} 
+    NET {} {} {} {} {} {n_7695} {} {0.000} {0.000} {125.200} {0.325} {757.500} {800.300} {} {} {} 
+    INST {FE_OFC765_n_7695} {A} {^} {Y} {^} {} {HB1xp67_ASAP7_75t_L} {64.500} {8.500} {74.200} {} {822.000} {864.800} {} {1} {(221.65, 113.65) (222.24, 113.26)} 
+    NET {} {} {} {} {} {FE_OFN6499_n_7695} {} {0.000} {0.000} {74.200} {0.555} {822.000} {864.800} {} {} {} 
+    INST {g58842__7482} {A} {^} {Y} {v} {} {NAND4xp25_ASAP7_75t_SL} {100.400} {26.600} {161.900} {} {922.400} {965.200} {} {1} {(249.52, 111.49) (249.67, 111.10)} 
+    NET {} {} {} {} {} {FE_OFN6615_rd_data_2__13} {} {0.000} {0.000} {161.900} {0.677} {922.400} {965.200} {} {} {} 
+    INST {FE_OFC881_rd_data_2__13} {A} {v} {Y} {v} {} {BUFx5_ASAP7_75t_SL} {80.200} {10.000} {76.000} {} {1002.600} {1045.400} {} {1} {(251.46, 132.01) (252.47, 132.41)} 
+    NET {} {} {} {} {} {rd_data[2][13]} {} {4.600} {0.800} {76.600} {0.000} {1007.200} {1050.000} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_CAP_CLK_PATH
+END_PATH 12
+PATH 13
+  VIEW  view_tt
+  CHECK_TYPE {Late External Delay Assertion}
+  REF {} {}
+  ENDPT {} {rd_data[7][6]} {} {^} {leading} {clk} {clk(C)(P)(view_tt)*}
+  BEGINPT {} {rd_row_addr[2]} {} {^} {leading} {clk} {clk(D)(P)(view_tt)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {External Delay} {450.000}
+    {+} {Phase Shift} {1500.000}
+    {+} {CPPR Adjustment} {0.000}
+    {=} {Required Time} {1050.000}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {1005.600}
+    {=} {Slack Time} {44.400}
+  END_SLK_CLC
+  SLK 44.400
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {+} {Input Delay} {450.000}
+    {=} {Beginpoint Arrival Time} {450.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {rd_row_addr[2]} {^} {} {} {rd_row_addr[2]} {} {} {} {4.000} {2.675} {450.000} {494.400} {} {4} {(0.00, 255.61) } 
+    NET {} {} {} {} {} {rd_row_addr[2]} {} {1.400} {1.400} {4.000} {2.675} {451.400} {495.800} {} {} {} 
+    INST {g60897} {A} {^} {Y} {v} {} {INVx1_ASAP7_75t_SL} {4.900} {0.100} {6.100} {} {456.300} {500.700} {} {1} {(140.22, 257.29) (140.59, 257.69)} 
+    NET {} {} {} {} {} {n_6171} {} {0.000} {0.000} {6.100} {0.372} {456.300} {500.700} {} {} {} 
+    INST {g60879} {B} {v} {Y} {^} {} {NOR2xp33_ASAP7_75t_SL} {22.500} {1.200} {41.200} {} {478.800} {523.200} {} {2} {(139.75, 257.54) (139.83, 257.69)} 
+    NET {} {} {} {} {} {n_6185} {} {0.000} {0.000} {41.200} {1.128} {478.800} {523.200} {} {} {} 
+    INST {g60873} {B} {^} {Y} {v} {} {NAND2xp5_ASAP7_75t_SL} {24.700} {0.400} {42.300} {} {503.500} {547.900} {} {1} {(140.83, 255.96) (141.01, 255.82)} 
+    NET {} {} {} {} {} {n_6186} {} {0.000} {0.000} {42.300} {3.139} {503.500} {547.900} {} {} {} 
+    INST {FE_OFC2631_n_6186} {A} {v} {Y} {^} {} {INVx5_ASAP7_75t_SL} {69.200} {8.500} {144.400} {} {572.700} {617.100} {} {28} {(141.73, 256.21) (142.53, 255.82)} 
+    NET {} {} {} {} {} {n_6155} {} {16.200} {1.300} {148.400} {17.370} {588.900} {633.300} {} {} {} 
+    INST {FE_OFC3294_n_6155} {A} {^} {Y} {^} {} {BUFx5_ASAP7_75t_SL} {101.200} {9.600} {193.000} {} {690.100} {734.500} {} {63} {(254.70, 272.41) (253.69, 272.81)} 
+    NET {} {} {} {} {} {FE_OFN6294_n_6155} {} {15.500} {0.500} {197.800} {37.565} {705.600} {750.000} {} {} {} 
+    INST {g59587} {A2} {^} {Y} {v} {} {AOI22xp5_ASAP7_75t_SL} {97.600} {25.800} {132.800} {} {803.200} {847.600} {} {1} {(255.35, 332.88) (254.98, 333.29)} 
+    NET {} {} {} {} {} {n_7255} {} {0.000} {0.000} {132.800} {0.502} {803.200} {847.600} {} {} {} 
+    INST {g58897__5115} {C} {v} {Y} {^} {} {NAND4xp25_ASAP7_75t_SL} {83.700} {14.200} {112.600} {} {886.900} {931.300} {} {1} {(215.60, 331.74) (215.02, 331.42)} 
+    NET {} {} {} {} {} {FE_OFN6525_rd_data_7__6} {} {0.000} {0.000} {112.600} {0.566} {886.900} {931.300} {} {} {} 
+    INST {FE_OFC791_rd_data_7__6} {A} {^} {Y} {^} {} {BUFx2_ASAP7_75t_SL} {114.800} {45.600} {122.100} {} {1001.700} {1046.100} {} {1} {(222.52, 316.69) (223.20, 316.30)} 
+    NET {} {} {} {} {} {rd_data[7][6]} {} {3.900} {0.800} {122.300} {0.000} {1005.600} {1050.000} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_CAP_CLK_PATH
+END_PATH 13
+PATH 14
+  VIEW  view_tt
+  CHECK_TYPE {Late External Delay Assertion}
+  REF {} {}
+  ENDPT {} {rd_data[1][3]} {} {^} {leading} {clk} {clk(C)(P)(view_tt)*}
+  BEGINPT {} {rd_row_addr[2]} {} {^} {leading} {clk} {clk(D)(P)(view_tt)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {External Delay} {450.000}
+    {+} {Phase Shift} {1500.000}
+    {+} {CPPR Adjustment} {0.000}
+    {=} {Required Time} {1050.000}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {1004.900}
+    {=} {Slack Time} {45.100}
+  END_SLK_CLC
+  SLK 45.100
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {+} {Input Delay} {450.000}
+    {=} {Beginpoint Arrival Time} {450.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {rd_row_addr[2]} {^} {} {} {rd_row_addr[2]} {} {} {} {4.000} {2.675} {450.000} {495.100} {} {4} {(0.00, 255.61) } 
+    NET {} {} {} {} {} {rd_row_addr[2]} {} {1.400} {1.400} {4.000} {2.675} {451.400} {496.500} {} {} {} 
+    INST {g60897} {A} {^} {Y} {v} {} {INVx1_ASAP7_75t_SL} {4.900} {0.100} {6.100} {} {456.300} {501.400} {} {1} {(140.22, 257.29) (140.59, 257.69)} 
+    NET {} {} {} {} {} {n_6171} {} {0.000} {0.000} {6.100} {0.372} {456.300} {501.400} {} {} {} 
+    INST {g60879} {B} {v} {Y} {^} {} {NOR2xp33_ASAP7_75t_SL} {22.500} {1.200} {41.200} {} {478.800} {523.900} {} {2} {(139.75, 257.54) (139.83, 257.69)} 
+    NET {} {} {} {} {} {n_6185} {} {0.000} {0.000} {41.200} {1.128} {478.800} {523.900} {} {} {} 
+    INST {g60873} {B} {^} {Y} {v} {} {NAND2xp5_ASAP7_75t_SL} {24.700} {0.400} {42.300} {} {503.500} {548.600} {} {1} {(140.83, 255.96) (141.01, 255.82)} 
+    NET {} {} {} {} {} {n_6186} {} {0.000} {0.000} {42.300} {3.139} {503.500} {548.600} {} {} {} 
+    INST {FE_OFC2631_n_6186} {A} {v} {Y} {^} {} {INVx5_ASAP7_75t_SL} {69.200} {8.500} {144.400} {} {572.700} {617.800} {} {28} {(141.73, 256.21) (142.53, 255.82)} 
+    NET {} {} {} {} {} {n_6155} {} {18.400} {1.300} {148.700} {17.370} {591.100} {636.200} {} {} {} 
+    INST {FE_OFC3296_n_6155} {A} {^} {Y} {^} {} {BUFx10_ASAP7_75t_SL} {64.900} {2.700} {179.200} {} {656.000} {701.100} {} {75} {(267.66, 163.33) (269.43, 162.94)} 
+    NET {} {} {} {} {} {FE_OFN6725_n_6186} {} {56.300} {1.100} {215.500} {48.241} {712.300} {757.400} {} {} {} 
+    INST {g59717} {A2} {^} {Y} {v} {} {AOI22xp5_ASAP7_75t_SL} {98.800} {28.200} {130.700} {} {811.100} {856.200} {} {1} {(219.92, 49.92) (220.29, 50.33)} 
+    NET {} {} {} {} {} {n_7125} {} {0.000} {0.000} {130.700} {0.325} {811.100} {856.200} {} {} {} 
+    INST {FE_OFC721_n_7125} {A} {v} {Y} {v} {} {HB1xp67_ASAP7_75t_L} {80.000} {7.600} {83.900} {} {891.100} {936.200} {} {1} {(213.44, 69.37) (212.86, 69.77)} 
+    NET {} {} {} {} {} {FE_OFN6455_n_7125} {} {0.000} {0.000} {83.900} {0.515} {891.100} {936.200} {} {} {} 
+    INST {g58924__1881} {D} {v} {Y} {^} {} {NAND4xp25_ASAP7_75t_SL} {28.500} {0.000} {50.100} {} {919.600} {964.700} {} {1} {(178.02, 73.76) (177.22, 74.09)} 
+    NET {} {} {} {} {} {FE_OFN6650_rd_data_1__3} {} {0.000} {0.000} {50.100} {0.566} {919.600} {964.700} {} {} {} 
+    INST {FE_OFC1417_rd_data_1__3} {A} {^} {Y} {^} {} {BUFx2_ASAP7_75t_SL} {80.600} {2.700} {151.200} {} {1000.200} {1045.300} {} {1} {(177.37, 75.85) (178.06, 76.25)} 
+    NET {} {} {} {} {} {rd_data[1][3]} {} {4.700} {0.100} {151.600} {0.000} {1004.900} {1050.000} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_CAP_CLK_PATH
+END_PATH 14
+PATH 15
+  VIEW  view_tt
+  CHECK_TYPE {Late External Delay Assertion}
+  REF {} {}
+  ENDPT {} {rd_data[2][9]} {} {v} {leading} {clk} {clk(C)(P)(view_tt)*}
+  BEGINPT {} {rd_row_addr[0]} {} {v} {leading} {clk} {clk(D)(P)(view_tt)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {External Delay} {450.000}
+    {+} {Phase Shift} {1500.000}
+    {+} {CPPR Adjustment} {0.000}
+    {=} {Required Time} {1050.000}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {1004.500}
+    {=} {Slack Time} {45.500}
+  END_SLK_CLC
+  SLK 45.500
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {+} {Input Delay} {450.000}
+    {=} {Beginpoint Arrival Time} {450.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {rd_row_addr[0]} {v} {} {} {rd_row_addr[0]} {} {} {} {4.000} {2.632} {450.000} {495.500} {} {4} {(0.00, 259.64) } 
+    NET {} {} {} {} {} {rd_row_addr[0]} {} {4.700} {2.900} {5.500} {2.632} {454.700} {500.200} {} {} {} 
+    INST {g60896} {A} {v} {Y} {^} {} {INVx1_ASAP7_75t_SL} {5.400} {0.000} {8.000} {} {460.100} {505.600} {} {1} {(137.63, 257.29) (137.26, 257.69)} 
+    NET {} {} {} {} {} {n_6172} {} {0.000} {0.000} {8.000} {0.372} {460.100} {505.600} {} {} {} 
+    INST {g60880} {B} {^} {Y} {v} {} {NOR2xp33_ASAP7_75t_SL} {22.600} {0.500} {38.900} {} {482.700} {528.200} {} {2} {(137.16, 255.96) (137.24, 255.82)} 
+    NET {} {} {} {} {} {n_6184} {} {0.000} {0.000} {38.900} {1.132} {482.700} {528.200} {} {} {} 
+    INST {g60876} {B} {v} {Y} {v} {} {AND2x2_ASAP7_75t_SL} {35.700} {2.700} {32.200} {} {518.400} {563.900} {} {2} {(137.41, 254.05) (136.66, 253.74)} 
+    NET {} {} {} {} {} {n_6151} {} {0.000} {0.000} {32.200} {2.602} {518.400} {563.900} {} {} {} 
+    INST {FE_OFC1105_n_6151} {A} {v} {Y} {v} {} {BUFx10_ASAP7_75t_SL} {42.400} {1.800} {87.600} {} {560.800} {606.300} {} {50} {(128.99, 240.01) (130.75, 240.41)} 
+    NET {} {} {} {} {} {FE_OFN6278_n_6151} {} {27.300} {1.100} {104.700} {38.707} {588.100} {633.600} {} {} {} 
+    INST {FE_OFC1107_n_6151} {A} {v} {Y} {v} {} {BUFx2_ASAP7_75t_L} {67.900} {2.900} {70.900} {} {656.000} {701.500} {} {15} {(169.81, 119.05) (170.50, 119.45)} 
+    NET {} {} {} {} {} {FE_OFN6280_n_6151} {} {0.200} {0.000} {70.900} {9.463} {656.200} {701.700} {} {} {} 
+    INST {g59209__9315} {B2} {v} {Y} {^} {} {AOI22xp5_ASAP7_75t_SL} {72.400} {16.600} {95.900} {} {728.600} {774.100} {} {1} {(172.84, 116.96) (172.99, 117.29)} 
+    NET {} {} {} {} {} {n_7633} {} {0.000} {0.000} {95.900} {0.325} {728.600} {774.100} {} {} {} 
+    INST {FE_OFC758_n_7633} {A} {^} {Y} {^} {} {HB1xp67_ASAP7_75t_L} {164.700} {65.900} {172.000} {} {893.300} {938.800} {} {1} {(197.89, 116.89) (198.48, 117.29)} 
+    NET {} {} {} {} {} {FE_OFN6492_n_7633} {} {0.000} {0.000} {172.000} {0.555} {893.300} {938.800} {} {} {} 
+    INST {g58851__6417} {A} {^} {Y} {v} {} {NAND4xp25_ASAP7_75t_SL} {48.400} {0.000} {92.600} {} {941.700} {987.200} {} {1} {(257.08, 117.97) (257.23, 117.58)} 
+    NET {} {} {} {} {} {FE_OFN6619_rd_data_2__9} {} {0.000} {0.000} {92.600} {0.566} {941.700} {987.200} {} {} {} 
+    INST {FE_OFC885_rd_data_2__9} {A} {v} {Y} {v} {} {BUFx2_ASAP7_75t_SL} {61.200} {7.500} {64.200} {} {1002.900} {1048.400} {} {1} {(257.94, 126.61) (258.63, 126.22)} 
+    NET {} {} {} {} {} {rd_data[2][9]} {} {1.600} {0.300} {64.200} {0.000} {1004.500} {1050.000} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_CAP_CLK_PATH
+END_PATH 15
+PATH 16
+  VIEW  view_tt
+  CHECK_TYPE {Late External Delay Assertion}
+  REF {} {}
+  ENDPT {} {rd_data[1][14]} {} {^} {leading} {clk} {clk(C)(P)(view_tt)*}
+  BEGINPT {} {rd_row_addr[2]} {} {^} {leading} {clk} {clk(D)(P)(view_tt)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {External Delay} {450.000}
+    {+} {Phase Shift} {1500.000}
+    {+} {CPPR Adjustment} {0.000}
+    {=} {Required Time} {1050.000}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {1001.500}
+    {=} {Slack Time} {48.500}
+  END_SLK_CLC
+  SLK 48.500
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {+} {Input Delay} {450.000}
+    {=} {Beginpoint Arrival Time} {450.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {rd_row_addr[2]} {^} {} {} {rd_row_addr[2]} {} {} {} {4.000} {2.675} {450.000} {498.500} {} {4} {(0.00, 255.61) } 
+    NET {} {} {} {} {} {rd_row_addr[2]} {} {1.400} {1.400} {4.000} {2.675} {451.400} {499.900} {} {} {} 
+    INST {g60897} {A} {^} {Y} {v} {} {INVx1_ASAP7_75t_SL} {4.900} {0.100} {6.100} {} {456.300} {504.800} {} {1} {(140.22, 257.29) (140.59, 257.69)} 
+    NET {} {} {} {} {} {n_6171} {} {0.000} {0.000} {6.100} {0.372} {456.300} {504.800} {} {} {} 
+    INST {g60879} {B} {v} {Y} {^} {} {NOR2xp33_ASAP7_75t_SL} {22.500} {1.200} {41.200} {} {478.800} {527.300} {} {2} {(139.75, 257.54) (139.83, 257.69)} 
+    NET {} {} {} {} {} {n_6185} {} {0.000} {0.000} {41.200} {1.128} {478.800} {527.300} {} {} {} 
+    INST {g60873} {B} {^} {Y} {v} {} {NAND2xp5_ASAP7_75t_SL} {24.700} {0.400} {42.300} {} {503.500} {552.000} {} {1} {(140.83, 255.96) (141.01, 255.82)} 
+    NET {} {} {} {} {} {n_6186} {} {0.000} {0.000} {42.300} {3.139} {503.500} {552.000} {} {} {} 
+    INST {FE_OFC2631_n_6186} {A} {v} {Y} {^} {} {INVx5_ASAP7_75t_SL} {69.200} {8.500} {144.400} {} {572.700} {621.200} {} {28} {(141.73, 256.21) (142.53, 255.82)} 
+    NET {} {} {} {} {} {n_6155} {} {18.400} {1.300} {148.700} {17.370} {591.100} {639.600} {} {} {} 
+    INST {FE_OFC3296_n_6155} {A} {^} {Y} {^} {} {BUFx10_ASAP7_75t_SL} {64.900} {2.700} {179.200} {} {656.000} {704.500} {} {75} {(267.66, 163.33) (269.43, 162.94)} 
+    NET {} {} {} {} {} {FE_OFN6725_n_6186} {} {55.100} {1.100} {215.500} {48.241} {711.100} {759.600} {} {} {} 
+    INST {g60024} {A2} {^} {Y} {v} {} {AOI22xp5_ASAP7_75t_SL} {94.400} {18.400} {139.200} {} {805.500} {854.000} {} {1} {(251.24, 43.44) (251.61, 43.85)} 
+    NET {} {} {} {} {} {n_6818} {} {0.000} {0.000} {139.200} {0.325} {805.500} {854.000} {} {} {} 
+    INST {FE_OFC683_n_6818} {A} {v} {Y} {v} {} {HB1xp67_ASAP7_75t_L} {82.300} {6.100} {90.000} {} {887.800} {936.300} {} {1} {(248.44, 73.69) (247.85, 74.09)} 
+    NET {} {} {} {} {} {FE_OFN6417_n_6818} {} {0.000} {0.000} {90.000} {0.502} {887.800} {936.300} {} {} {} 
+    INST {g58905__1666} {C} {v} {Y} {^} {} {NAND4xp25_ASAP7_75t_SL} {26.000} {0.000} {50.400} {} {913.800} {962.300} {} {1} {(217.12, 81.18) (217.70, 80.86)} 
+    NET {} {} {} {} {} {FE_OFN6639_rd_data_1__14} {} {0.000} {0.000} {50.400} {0.566} {913.800} {962.300} {} {} {} 
+    INST {FE_OFC1412_rd_data_1__14} {A} {^} {Y} {^} {} {BUFx2_ASAP7_75t_SL} {85.000} {23.600} {109.800} {} {998.800} {1047.300} {} {1} {(219.71, 82.33) (220.39, 82.73)} 
+    NET {} {} {} {} {} {rd_data[1][14]} {} {2.700} {0.200} {109.800} {0.000} {1001.500} {1050.000} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_CAP_CLK_PATH
+END_PATH 16
+PATH 17
+  VIEW  view_tt
+  CHECK_TYPE {Late External Delay Assertion}
+  REF {} {}
+  ENDPT {} {rd_data[3][18]} {} {v} {leading} {clk} {clk(C)(P)(view_tt)*}
+  BEGINPT {} {rd_row_addr[0]} {} {v} {leading} {clk} {clk(D)(P)(view_tt)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {External Delay} {450.000}
+    {+} {Phase Shift} {1500.000}
+    {+} {CPPR Adjustment} {0.000}
+    {=} {Required Time} {1050.000}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {999.700}
+    {=} {Slack Time} {50.300}
+  END_SLK_CLC
+  SLK 50.300
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {+} {Input Delay} {450.000}
+    {=} {Beginpoint Arrival Time} {450.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {rd_row_addr[0]} {v} {} {} {rd_row_addr[0]} {} {} {} {4.000} {2.632} {450.000} {500.300} {} {4} {(0.00, 259.64) } 
+    NET {} {} {} {} {} {rd_row_addr[0]} {} {4.700} {2.900} {5.500} {2.632} {454.700} {505.000} {} {} {} 
+    INST {g60896} {A} {v} {Y} {^} {} {INVx1_ASAP7_75t_SL} {5.400} {0.000} {8.000} {} {460.100} {510.400} {} {1} {(137.63, 257.29) (137.26, 257.69)} 
+    NET {} {} {} {} {} {n_6172} {} {0.000} {0.000} {8.000} {0.372} {460.100} {510.400} {} {} {} 
+    INST {g60880} {B} {^} {Y} {v} {} {NOR2xp33_ASAP7_75t_SL} {22.600} {0.500} {38.900} {} {482.700} {533.000} {} {2} {(137.16, 255.96) (137.24, 255.82)} 
+    NET {} {} {} {} {} {n_6184} {} {0.000} {0.000} {38.900} {1.132} {482.700} {533.000} {} {} {} 
+    INST {g60876} {B} {v} {Y} {v} {} {AND2x2_ASAP7_75t_SL} {35.700} {2.700} {32.200} {} {518.400} {568.700} {} {2} {(137.41, 254.05) (136.66, 253.74)} 
+    NET {} {} {} {} {} {n_6151} {} {0.000} {0.000} {32.200} {2.602} {518.400} {568.700} {} {} {} 
+    INST {FE_OFC1106_n_6151} {A} {v} {Y} {v} {} {BUFx10_ASAP7_75t_SL} {60.200} {2.600} {150.400} {} {578.600} {628.900} {} {73} {(138.06, 250.81) (136.29, 251.21)} 
+    NET {} {} {} {} {} {FE_OFN6279_n_6151} {} {46.000} {1.600} {176.800} {55.458} {624.600} {674.900} {} {} {} 
+    INST {FE_OFC1111_n_6151} {A} {v} {Y} {v} {} {BUFx12_ASAP7_75t_SL} {70.100} {2.200} {92.700} {} {694.700} {745.000} {} {45} {(298.12, 209.77) (296.13, 210.17)} 
+    NET {} {} {} {} {} {FE_OFN6743_n_6151} {} {5.800} {0.300} {97.500} {27.957} {700.500} {750.800} {} {} {} 
+    INST {FE_OFC3611_n_6151} {A} {v} {Y} {v} {} {BUFx2_ASAP7_75t_SL} {73.800} {3.100} {101.900} {} {774.300} {824.600} {} {17} {(298.55, 191.41) (299.23, 191.02)} 
+    NET {} {} {} {} {} {FE_OFN13021_n} {} {1.400} {0.200} {102.100} {10.725} {775.700} {826.000} {} {} {} 
+    INST {g60179} {B2} {v} {Y} {^} {} {AOI22xp5_ASAP7_75t_SL} {59.300} {6.400} {97.500} {} {835.000} {885.300} {} {1} {(310.21, 183.92) (310.36, 184.25)} 
+    NET {} {} {} {} {} {n_6663} {} {0.000} {0.000} {97.500} {0.555} {835.000} {885.300} {} {} {} 
+    INST {g59039__4733} {A} {^} {Y} {v} {} {NAND4xp25_ASAP7_75t_SL} {164.700} {37.300} {264.100} {} {999.700} {1050.000} {} {1} {(311.72, 168.73) (311.88, 169.13)} 
+    NET {} {} {} {} {} {rd_data[3][18]} {} {0.000} {0.000} {264.100} {0.000} {999.700} {1050.000} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_CAP_CLK_PATH
+END_PATH 17
+PATH 18
+  VIEW  view_tt
+  CHECK_TYPE {Late External Delay Assertion}
+  REF {} {}
+  ENDPT {} {rd_data[1][2]} {} {^} {leading} {clk} {clk(C)(P)(view_tt)*}
+  BEGINPT {} {rd_row_addr[2]} {} {^} {leading} {clk} {clk(D)(P)(view_tt)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {External Delay} {450.000}
+    {+} {Phase Shift} {1500.000}
+    {+} {CPPR Adjustment} {0.000}
+    {=} {Required Time} {1050.000}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {999.400}
+    {=} {Slack Time} {50.600}
+  END_SLK_CLC
+  SLK 50.600
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {+} {Input Delay} {450.000}
+    {=} {Beginpoint Arrival Time} {450.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {rd_row_addr[2]} {^} {} {} {rd_row_addr[2]} {} {} {} {4.000} {2.675} {450.000} {500.600} {} {4} {(0.00, 255.61) } 
+    NET {} {} {} {} {} {rd_row_addr[2]} {} {1.400} {1.400} {4.000} {2.675} {451.400} {502.000} {} {} {} 
+    INST {g60897} {A} {^} {Y} {v} {} {INVx1_ASAP7_75t_SL} {4.900} {0.100} {6.100} {} {456.300} {506.900} {} {1} {(140.22, 257.29) (140.59, 257.69)} 
+    NET {} {} {} {} {} {n_6171} {} {0.000} {0.000} {6.100} {0.372} {456.300} {506.900} {} {} {} 
+    INST {g60879} {B} {v} {Y} {^} {} {NOR2xp33_ASAP7_75t_SL} {22.500} {1.200} {41.200} {} {478.800} {529.400} {} {2} {(139.75, 257.54) (139.83, 257.69)} 
+    NET {} {} {} {} {} {n_6185} {} {0.000} {0.000} {41.200} {1.128} {478.800} {529.400} {} {} {} 
+    INST {g60873} {B} {^} {Y} {v} {} {NAND2xp5_ASAP7_75t_SL} {24.700} {0.400} {42.300} {} {503.500} {554.100} {} {1} {(140.83, 255.96) (141.01, 255.82)} 
+    NET {} {} {} {} {} {n_6186} {} {0.000} {0.000} {42.300} {3.139} {503.500} {554.100} {} {} {} 
+    INST {FE_OFC2631_n_6186} {A} {v} {Y} {^} {} {INVx5_ASAP7_75t_SL} {69.200} {8.500} {144.400} {} {572.700} {623.300} {} {28} {(141.73, 256.21) (142.53, 255.82)} 
+    NET {} {} {} {} {} {n_6155} {} {18.400} {1.300} {148.700} {17.370} {591.100} {641.700} {} {} {} 
+    INST {FE_OFC3296_n_6155} {A} {^} {Y} {^} {} {BUFx10_ASAP7_75t_SL} {64.900} {2.700} {179.200} {} {656.000} {706.600} {} {75} {(267.66, 163.33) (269.43, 162.94)} 
+    NET {} {} {} {} {} {FE_OFN6725_n_6186} {} {56.200} {1.100} {215.500} {48.241} {712.200} {762.800} {} {} {} 
+    INST {g59728} {A2} {^} {Y} {v} {} {AOI22xp5_ASAP7_75t_SL} {73.600} {18.400} {109.000} {} {785.800} {836.400} {} {1} {(221.87, 49.92) (222.24, 50.33)} 
+    NET {} {} {} {} {} {n_7114} {} {0.000} {0.000} {109.000} {0.325} {785.800} {836.400} {} {} {} 
+    INST {FE_OFC718_n_7114} {A} {v} {Y} {v} {} {HB1xp67_ASAP7_75t_L} {96.600} {2.600} {132.900} {} {882.400} {933.000} {} {1} {(198.97, 52.09) (198.39, 52.49)} 
+    NET {} {} {} {} {} {FE_OFN6452_n_7114} {} {0.000} {0.000} {132.900} {0.506} {882.400} {933.000} {} {} {} 
+    INST {g58926__7482} {B} {v} {Y} {^} {} {NAND4xp25_ASAP7_75t_SL} {24.700} {0.000} {48.800} {} {907.100} {957.700} {} {1} {(173.48, 72.54) (173.85, 72.22)} 
+    NET {} {} {} {} {} {FE_OFN6651_rd_data_1__2} {} {0.000} {0.000} {48.800} {0.566} {907.100} {957.700} {} {} {} 
+    INST {FE_OFC1369_rd_data_1__2} {A} {^} {Y} {^} {} {BUFx2_ASAP7_75t_SL} {87.900} {11.500} {147.200} {} {995.000} {1045.600} {} {1} {(174.56, 72.61) (175.25, 72.22)} 
+    NET {} {} {} {} {} {rd_data[1][2]} {} {4.400} {0.300} {147.100} {0.000} {999.400} {1050.000} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_CAP_CLK_PATH
+END_PATH 18
+PATH 19
+  VIEW  view_tt
+  CHECK_TYPE {Late External Delay Assertion}
+  REF {} {}
+  ENDPT {} {rd_data[7][4]} {} {v} {leading} {clk} {clk(C)(P)(view_tt)*}
+  BEGINPT {} {rd_row_addr[0]} {} {v} {leading} {clk} {clk(D)(P)(view_tt)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {External Delay} {450.000}
+    {+} {Phase Shift} {1500.000}
+    {+} {CPPR Adjustment} {0.000}
+    {=} {Required Time} {1050.000}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {998.700}
+    {=} {Slack Time} {51.300}
+  END_SLK_CLC
+  SLK 51.300
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {+} {Input Delay} {450.000}
+    {=} {Beginpoint Arrival Time} {450.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {rd_row_addr[0]} {v} {} {} {rd_row_addr[0]} {} {} {} {4.000} {2.632} {450.000} {501.300} {} {4} {(0.00, 259.64) } 
+    NET {} {} {} {} {} {rd_row_addr[0]} {} {4.700} {2.900} {5.500} {2.632} {454.700} {506.000} {} {} {} 
+    INST {g60896} {A} {v} {Y} {^} {} {INVx1_ASAP7_75t_SL} {5.400} {0.000} {8.000} {} {460.100} {511.400} {} {1} {(137.63, 257.29) (137.26, 257.69)} 
+    NET {} {} {} {} {} {n_6172} {} {0.000} {0.000} {8.000} {0.372} {460.100} {511.400} {} {} {} 
+    INST {g60880} {B} {^} {Y} {v} {} {NOR2xp33_ASAP7_75t_SL} {22.600} {0.500} {38.900} {} {482.700} {534.000} {} {2} {(137.16, 255.96) (137.24, 255.82)} 
+    NET {} {} {} {} {} {n_6184} {} {0.000} {0.000} {38.900} {1.132} {482.700} {534.000} {} {} {} 
+    INST {g60876} {B} {v} {Y} {v} {} {AND2x2_ASAP7_75t_SL} {35.700} {2.700} {32.200} {} {518.400} {569.700} {} {2} {(137.41, 254.05) (136.66, 253.74)} 
+    NET {} {} {} {} {} {n_6151} {} {0.000} {0.000} {32.200} {2.602} {518.400} {569.700} {} {} {} 
+    INST {FE_OFC1106_n_6151} {A} {v} {Y} {v} {} {BUFx10_ASAP7_75t_SL} {60.200} {2.600} {150.400} {} {578.600} {629.900} {} {73} {(138.06, 250.81) (136.29, 251.21)} 
+    NET {} {} {} {} {} {FE_OFN6279_n_6151} {} {19.000} {0.700} {160.900} {55.458} {597.600} {648.900} {} {} {} 
+    INST {g59787} {B2} {v} {Y} {^} {} {AOI22xp5_ASAP7_75t_SL} {97.500} {28.800} {110.900} {} {695.100} {746.400} {} {1} {(134.17, 314.46) (134.32, 314.14)} 
+    NET {} {} {} {} {} {n_7055} {} {0.000} {0.000} {110.900} {0.325} {695.100} {746.400} {} {} {} 
+    INST {FE_OFC711_n_7055} {A} {^} {Y} {^} {} {HB1xp67_ASAP7_75t_L} {106.200} {22.600} {136.700} {} {801.300} {852.600} {} {1} {(155.34, 316.69) (155.92, 316.30)} 
+    NET {} {} {} {} {} {FE_OFN6445_n_7055} {} {0.000} {0.000} {136.700} {0.555} {801.300} {852.600} {} {} {} 
+    INST {g58928__6161} {A} {^} {Y} {v} {} {NAND4xp25_ASAP7_75t_SL} {120.400} {30.600} {171.200} {} {921.700} {973.000} {} {1} {(217.33, 318.85) (217.18, 318.46)} 
+    NET {} {} {} {} {} {FE_OFN6527_rd_data_7__4} {} {0.000} {0.000} {171.200} {0.566} {921.700} {973.000} {} {} {} 
+    INST {FE_OFC793_rd_data_7__4} {A} {v} {Y} {v} {} {BUFx2_ASAP7_75t_SL} {74.800} {4.200} {82.700} {} {996.500} {1047.800} {} {1} {(245.41, 313.45) (246.10, 313.85)} 
+    NET {} {} {} {} {} {rd_data[7][4]} {} {2.200} {0.100} {82.800} {0.000} {998.700} {1050.000} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_CAP_CLK_PATH
+END_PATH 19
+PATH 20
+  VIEW  view_tt
+  CHECK_TYPE {Late External Delay Assertion}
+  REF {} {}
+  ENDPT {} {rd_data[7][11]} {} {^} {leading} {clk} {clk(C)(P)(view_tt)*}
+  BEGINPT {} {rd_row_addr[2]} {} {^} {leading} {clk} {clk(D)(P)(view_tt)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {External Delay} {450.000}
+    {+} {Phase Shift} {1500.000}
+    {+} {CPPR Adjustment} {0.000}
+    {=} {Required Time} {1050.000}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {998.600}
+    {=} {Slack Time} {51.400}
+  END_SLK_CLC
+  SLK 51.400
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {+} {Input Delay} {450.000}
+    {=} {Beginpoint Arrival Time} {450.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {rd_row_addr[2]} {^} {} {} {rd_row_addr[2]} {} {} {} {4.000} {2.675} {450.000} {501.400} {} {4} {(0.00, 255.61) } 
+    NET {} {} {} {} {} {rd_row_addr[2]} {} {1.400} {1.400} {4.000} {2.675} {451.400} {502.800} {} {} {} 
+    INST {g60897} {A} {^} {Y} {v} {} {INVx1_ASAP7_75t_SL} {4.900} {0.100} {6.100} {} {456.300} {507.700} {} {1} {(140.22, 257.29) (140.59, 257.69)} 
+    NET {} {} {} {} {} {n_6171} {} {0.000} {0.000} {6.100} {0.372} {456.300} {507.700} {} {} {} 
+    INST {g60879} {B} {v} {Y} {^} {} {NOR2xp33_ASAP7_75t_SL} {22.500} {1.200} {41.200} {} {478.800} {530.200} {} {2} {(139.75, 257.54) (139.83, 257.69)} 
+    NET {} {} {} {} {} {n_6185} {} {0.000} {0.000} {41.200} {1.128} {478.800} {530.200} {} {} {} 
+    INST {g60873} {B} {^} {Y} {v} {} {NAND2xp5_ASAP7_75t_SL} {24.700} {0.400} {42.300} {} {503.500} {554.900} {} {1} {(140.83, 255.96) (141.01, 255.82)} 
+    NET {} {} {} {} {} {n_6186} {} {0.000} {0.000} {42.300} {3.139} {503.500} {554.900} {} {} {} 
+    INST {FE_OFC2631_n_6186} {A} {v} {Y} {^} {} {INVx5_ASAP7_75t_SL} {69.200} {8.500} {144.400} {} {572.700} {624.100} {} {28} {(141.73, 256.21) (142.53, 255.82)} 
+    NET {} {} {} {} {} {n_6155} {} {16.200} {1.300} {148.400} {17.370} {588.900} {640.300} {} {} {} 
+    INST {FE_OFC3294_n_6155} {A} {^} {Y} {^} {} {BUFx5_ASAP7_75t_SL} {101.200} {9.600} {193.000} {} {690.100} {741.500} {} {63} {(254.70, 272.41) (253.69, 272.81)} 
+    NET {} {} {} {} {} {FE_OFN6294_n_6155} {} {18.300} {0.500} {198.000} {37.565} {708.400} {759.800} {} {} {} 
+    INST {g60480} {A2} {^} {Y} {v} {} {AOI22xp5_ASAP7_75t_SL} {137.700} {49.400} {158.600} {} {846.100} {897.500} {} {1} {(276.52, 337.20) (276.15, 337.61)} 
+    NET {} {} {} {} {} {n_6362} {} {0.000} {0.000} {158.600} {0.502} {846.100} {897.500} {} {} {} 
+    INST {g59085__1617} {C} {v} {Y} {^} {} {NAND4xp25_ASAP7_75t_SL} {53.400} {8.500} {77.800} {} {899.500} {950.900} {} {1} {(230.72, 333.90) (231.31, 333.58)} 
+    NET {} {} {} {} {} {FE_OFN6520_rd_data_7__11} {} {0.000} {0.000} {77.800} {0.566} {899.500} {950.900} {} {} {} 
+    INST {FE_OFC786_rd_data_7__11} {A} {^} {Y} {^} {} {BUFx2_ASAP7_75t_SL} {95.500} {30.100} {116.300} {} {995.000} {1046.400} {} {1} {(239.80, 329.65) (240.48, 329.26)} 
+    NET {} {} {} {} {} {rd_data[7][11]} {} {3.600} {0.800} {116.500} {0.000} {998.600} {1050.000} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_CAP_CLK_PATH
+END_PATH 20
+

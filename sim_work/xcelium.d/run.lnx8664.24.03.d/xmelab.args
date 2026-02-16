@@ -1,0 +1,22 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-ACCESS
++rwc
+-timescale
+1ns/1ps
+-no_analogsolver
+-MESSAGES
+tb_systolic_top
+-XLMODE
+./xcelium.d/run.lnx8664.24.03.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx8664.24.03.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.24.03.d/hdl.var
+-WORK
+worklib
+-IRUNHASTOP
+-HASXLMODE

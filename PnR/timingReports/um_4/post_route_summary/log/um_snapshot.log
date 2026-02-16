@@ -1,2 +1,2 @@
       flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
-UM:*                                       0.000 ps         21.382 ps  post_route_summary
+UM:*                                       0.000 ps          8.000 ps  post_route_summary

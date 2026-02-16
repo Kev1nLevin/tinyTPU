@@ -1,0 +1,10 @@
+Multithreaded Timing Analysis is initialized with 8 threads
+
+
+**Info: (IMPSP-2062): Some of the PG shapes may not be colorized properly in this design, users are required to run command colorizePowerMesh (CUI: add_power_mesh_colors) before any placement related commands!
+Begin checking placement ... (start mem=2857.7M, init mem=2988.5M)
+*info: Placed = 0             
+*info: Unplaced = 31520       
+Placement Density:55.13%(70544/127946)
+Placement Density (including fixed std cells):55.13%(70544/127946)
+Finished checkPlace (total: cpu=0:00:00.2, real=0:00:00.0; vio checks: cpu=0:00:00.0, real=0:00:00.0; mem=2988.5M)
