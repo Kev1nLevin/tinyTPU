@@ -1,0 +1,74 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v25.10-p002_1, built Wed Apr 23 12:43:30 PDT 2025
+Options:	
+Date:		Tue Feb 17 22:37:15 2026
+Host:		raindrop (x86_64 w/Linux 5.14.0-611.27.1.el9_7.x86_64) (4cores*8cpus*Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz 8192KB)
+OS:		Red Hat Enterprise Linux 9.7 (Plow)
+
+License:
+		[22:37:16.272297] Configured Lic search path (25.01-s002): /home/kevinlevin/cadence/license.dat
+
+		invs	Innovus Implementation System	25.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+
+**Info: Common UI will be the default UI for innovus in the next major release. Please use -legacy_ui when invoking innovus if you wish to continue to use legacy UI.
+Change the soft stacksize limit to 0.2%RAM (46 mbytes). Set global soft_stack_size_limit to change the value.
+Info: Process UID = 454925 / 5b9b09ef-b896-445d-98be-180052c303b9 / vdenqvjdpR
+Loading attribute definitions from mini dummy db...
+Info: Defined 24274 Synthesis attributes
+Info: Skipped defining 1017 Synthesis attributes already defined in Innovus
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+[INFO] Loading PVS 22.20 fill procedures
+<CMD> win
+invalid command name "kevinlevin@raindrop"
+invalid command name "Cadence"
+invalid command name "Copyright"
+invalid command name "Version:v25.10-p002_1,"
+invalid command name "Options:"
+invalid command name "Date:Tue"
+invalid command name "Host:raindrop"
+invalid command name "OS:Red"
+invalid command name "License:"
+invalid command name "22:37:16.272297"
+invalid command name "invsInnovus"
+invalid command name "8"
+invalid command name "**Info:"
+<CMD> restoreDesign ../outputs/systolic_top_8x8_innovus.dat.dat
+#% Begin load design ... (date=02/17 22:38:47, mem=1922.2M)
+**ERROR: (IMPSYT-7338):	The specified design session directory '/home/kevinlevin/Projects/outputs/systolic_top_8x8_innovus.dat.dat' could not be located as specified. Check your file system, correct the location, and try restoring the design again.
+
+
+ERROR: 
+
+
+    while executing
+"error $catchMsg"
+    (procedure "restoreDesign" line 36)
+
+
+<CMD> restoreDesign ../outputs/systolic_top_8x8_innovus.dat.dat
+% Begin load design ... (date=02/17 22:38:53, mem=1922.5M)
+**ERROR: (IMPSYT-7338):	The specified design session directory '/home/kevinlevin/Projects/outputs/systolic_top_8x8_innovus.dat.dat' could not be located as specified. Check your file system, correct the location, and try restoring the design again.
+
+
+ERROR: 
+
+
+    while executing
+"error $catchMsg"
+    (procedure "restoreDesign" line 36)
+
+
+
+*** Memory Usage v#1 (Current mem = 1916.891M, initial mem = 880.375M) ***
+*** Message Summary: 0 warning(s), 2 error(s)
+
+--- Ending "Innovus" (totcpu=0:01:28, real=0:01:43, mem=1916.9M) ---

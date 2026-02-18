@@ -1,0 +1,99 @@
+[02/17 22:37:15      0s] 
+[02/17 22:37:15      0s] Cadence Innovus(TM) Implementation System.
+[02/17 22:37:15      0s] Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
+[02/17 22:37:15      0s] 
+[02/17 22:37:15      0s] Version:	v25.10-p002_1, built Wed Apr 23 12:43:30 PDT 2025
+[02/17 22:37:15      0s] Options:	
+[02/17 22:37:15      0s] Date:		Tue Feb 17 22:37:15 2026
+[02/17 22:37:15      0s] Host:		raindrop (x86_64 w/Linux 5.14.0-611.27.1.el9_7.x86_64) (4cores*8cpus*Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz 8192KB)
+[02/17 22:37:15      0s] OS:		Red Hat Enterprise Linux 9.7 (Plow)
+[02/17 22:37:15      0s] 
+[02/17 22:37:15      0s] License:
+[02/17 22:37:16      0s] 		[22:37:16.272297] Configured Lic search path (25.01-s002): /home/kevinlevin/cadence/license.dat
+
+[02/17 22:37:16      0s] 		invs	Innovus Implementation System	25.1	checkout succeeded
+[02/17 22:37:16      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[02/17 22:37:17      2s] 
+[02/17 22:37:17      2s] **Info: Common UI will be the default UI for innovus in the next major release. Please use -legacy_ui when invoking innovus if you wish to continue to use legacy UI.
+[02/17 22:37:46     60s] Memory management switch to non-aggressive memory release mode.
+[02/17 22:37:46     60s] 
+[02/17 22:37:46     60s] OS Mmap count monitoring thread starts. Limit of OS Mmap count is 65530
+[02/17 22:37:46     60s] 
+[02/17 22:37:51     68s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v25.10-p002_1 (64bit) 04/23/2025 12:43 (Linux 4.18.0-305.el8.x86_64)
+[02/17 22:37:58     74s] @(#)CDS: NanoRoute 25.10-p002_1 NR250317-0405/25_10-UB (database version 18.20.663) {superthreading v2.20}
+[02/17 22:37:58     74s] @(#)CDS: AAE 25.10-b008 (64bit) 04/23/2025 (Linux 4.18.0-305.el8.x86_64)
+[02/17 22:37:58     74s] @(#)CDS: CTE 25.10-b014_1 () Mar 28 2025 03:11:49 ( )
+[02/17 22:37:58     74s] @(#)CDS: SYNTECH 25.10-b006_1 () Mar 13 2025 03:32:26 ( )
+[02/17 22:37:58     74s] @(#)CDS: CPE v25.10-b011
+[02/17 22:37:58     74s] @(#)CDS: IQuantus/TQuantus 24.1.0-s201 (64bit) Thu Mar 20 10:21:58 PDT 2025 (Linux 4.18.0-305.el8.x86_64)
+[02/17 22:37:58     74s] @(#)CDS: OA 22.62-p005 Fri Dec 13 02:00:13 2024
+[02/17 22:37:58     74s] @(#)CDS: SGN 23.10-d005 (03-Oct-2023) (64 bit executable, TkQt5.15.9)
+[02/17 22:37:58     74s] @(#)CDS: RCDB 11.15.0
+[02/17 22:37:58     74s] @(#)CDS: STYLUS 25.10-b003_1 (03/20/2025 14:55 PDT)
+[02/17 22:37:58     74s] @(#)CDS: IntegrityPlanner-25.10-114 (25.10) (2025-04-01 16:19:39+0800)
+[02/17 22:37:58     74s] @(#)CDS: SYNTHESIS_ENGINE 25.10-p002
+[02/17 22:37:58     74s] @(#)CDS: TCDB v24.10-d018
+[02/17 22:37:58     74s] Create and set the environment variable TMPDIR to /home/kevinlevin/Projects/Neural_Network_Accelerator/innovus_temp_454925_5b9b09ef-b896-445d-98be-180052c303b9_raindrop_kevinlevin_aeptYP.
+
+[02/17 22:37:58     74s] Change the soft stacksize limit to 0.2%RAM (46 mbytes). Set global soft_stack_size_limit to change the value.
+[02/17 22:38:01     77s] Info: Process UID = 454925 / 5b9b09ef-b896-445d-98be-180052c303b9 / vdenqvjdpR
+[02/17 22:38:01     77s] Loading attribute definitions from mini dummy db...
+[02/17 22:38:03     79s] Info: Defined 24274 Synthesis attributes
+[02/17 22:38:03     79s] Info: Skipped defining 1017 Synthesis attributes already defined in Innovus
+[02/17 22:38:07     82s] 
+[02/17 22:38:07     82s] **INFO:  MMMC transition support version v31-84 
+[02/17 22:38:07     82s] 
+[02/17 22:38:07     82s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[02/17 22:38:07     82s] <CMD> suppressMessage ENCEXT-2799
+[02/17 22:38:07     82s] <CMD> getVersion
+[02/17 22:38:07     82s] [INFO] Loading PVS 22.20 fill procedures
+[02/17 22:38:08     83s] <CMD> win
+[02/17 22:38:11     83s] invalid command name "kevinlevin@raindrop"
+[02/17 22:38:11     83s] invalid command name "Cadence"
+[02/17 22:38:11     83s] invalid command name "Copyright"
+[02/17 22:38:11     83s] invalid command name "Version:v25.10-p002_1,"
+[02/17 22:38:11     83s] invalid command name "Options:"
+[02/17 22:38:11     83s] invalid command name "Date:Tue"
+[02/17 22:38:11     83s] invalid command name "Host:raindrop"
+[02/17 22:38:11     83s] invalid command name "OS:Red"
+[02/17 22:38:11     83s] invalid command name "License:"
+[02/17 22:38:11     83s] invalid command name "22:37:16.272297"
+[02/17 22:38:12     84s] invalid command name "invsInnovus"
+[02/17 22:38:12     84s] invalid command name "8"
+[02/17 22:38:12     84s] invalid command name "**Info:"
+[02/17 22:38:47     85s] <CMD> restoreDesign ../outputs/systolic_top_8x8_innovus.dat.dat
+[02/17 22:38:47     85s] #% Begin load design ... (date=02/17 22:38:47, mem=1922.2M)
+[02/17 22:38:47     85s] **ERROR: (IMPSYT-7338):	The specified design session directory '/home/kevinlevin/Projects/outputs/systolic_top_8x8_innovus.dat.dat' could not be located as specified. Check your file system, correct the location, and try restoring the design again.
+[02/17 22:38:47     85s] 
+[02/17 22:38:47     85s] 
+[02/17 22:38:47     85s] ERROR: 
+[02/17 22:38:47     85s] 
+[02/17 22:38:47     85s] 
+[02/17 22:38:47     85s]     while executing
+[02/17 22:38:47     85s] "error $catchMsg"
+[02/17 22:38:47     85s]     (procedure "restoreDesign" line 36)
+[02/17 22:38:47     85s] 
+[02/17 22:38:47     85s] 
+[02/17 22:38:53     86s] <CMD> restoreDesign ../outputs/systolic_top_8x8_innovus.dat.dat
+[02/17 22:38:53     86s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[02/17 22:38:53     86s] % Begin load design ... (date=02/17 22:38:53, mem=1922.5M)
+[02/17 22:38:53     86s] **ERROR: (IMPSYT-7338):	The specified design session directory '/home/kevinlevin/Projects/outputs/systolic_top_8x8_innovus.dat.dat' could not be located as specified. Check your file system, correct the location, and try restoring the design again.
+[02/17 22:38:53     86s] 
+[02/17 22:38:53     86s] 
+[02/17 22:38:53     86s] ERROR: 
+[02/17 22:38:53     86s] 
+[02/17 22:38:53     86s] 
+[02/17 22:38:53     86s]     while executing
+[02/17 22:38:53     86s] "error $catchMsg"
+[02/17 22:38:53     86s]     (procedure "restoreDesign" line 36)
+[02/17 22:38:53     86s] 
+[02/17 22:38:53     86s] 
+[02/17 22:38:58     86s] 
+[02/17 22:38:58     86s] *** Memory Usage v#1 (Current mem = 1916.891M, initial mem = 880.375M) ***
+[02/17 22:38:58     86s] 
+[02/17 22:38:58     86s] *** Summary of all messages that are not suppressed in this session:
+[02/17 22:38:58     86s] Severity  ID               Count  Summary                                  
+[02/17 22:38:58     86s] ERROR     IMPSYT-7338          2  The specified design session directory '...
+[02/17 22:38:58     86s] *** Message Summary: 0 warning(s), 2 error(s)
+[02/17 22:38:58     86s] 
+[02/17 22:38:58     86s] --- Ending "Innovus" (totcpu=0:01:28, real=0:01:43, mem=1916.9M) ---
